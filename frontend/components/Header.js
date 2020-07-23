@@ -24,7 +24,7 @@ function Header() {
           </Link>
         </ul>
       </nav>
-
+      <button>Cadastre-se</button>
       <style jsx>
         {`
           header {
