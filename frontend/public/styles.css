@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   min-height: 900px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .hero-banner {
@@ -45,7 +45,7 @@
   margin-top: 10px;
 }
 
-form {
+.search form {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,7 +74,7 @@ form button {
 }
 
 section.about-us {
-  margin-top: 100px;
+  margin-top: 180px;
   min-height: 800px;
   display: flex;
 }
@@ -244,8 +244,6 @@ section.about-us {
   column-gap: 50px;
   row-gap: 110px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .highlights > button {
@@ -253,4 +251,89 @@ section.about-us {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.help {
+  position: relative;
+  top: 600px;
+}
+
+.help h2 {
+  text-align: center;
+  color: #222;
+}
+
+.help form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  box-shadow: 0px 20px 37px -28px rgba(107, 107, 107, 1);
+  padding: 20px 0;
+  border-radius: 50px;
+}
+
+.help form input {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 0;
+  width: 30%;
+  font-size: 16px;
+}
+
+footer {
+  position: relative;
+  margin-top: 300px;
+  top: 600px;
+  width: 100%;
+  background: #2289ff;
+  color: white;
+  height: 300px;
+  padding: 50px;
+  border-radius: 60px 0 0 0;
+}
+
+footer .logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+footer .social-medias {
+  display: flex;
+  justify-content: center;
+}
+
+.social-medias span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.footer-menu li {
+  margin-right: 20px;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
 }

@@ -7,6 +7,10 @@ import {
   FaMeetup,
   FaHandshake,
   FaPiggyBank,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaEnvelope,
 } from 'react-icons/fa';
 import Header from '../components/Header';
 import House from '../components/House';
@@ -275,6 +279,70 @@ export default function App() {
 
           <button type='button'>Carregar mais</button>
         </session>
+
+        <session className='help'>
+          <h2>Alguma dúvida?</h2>
+          <h2>Deixe-nos ajudar você</h2>
+
+          <form className='container' action=''>
+            <input
+              type='email'
+              name='email'
+              id='email'
+              placeholder='Digite seu e-mail'
+            />
+            <button type='submit'>Enviar</button>
+          </form>
+        </session>
+
+        <footer>
+          <div className='logo'>
+            <span>RS</span>ky
+          </div>
+
+          <div className='social-medias'>
+            <span>
+              <Link href='#'>
+                <FaFacebook size={40} />
+              </Link>
+            </span>
+            <span>
+              <Link href='#'>
+                <FaInstagram size={40} />
+              </Link>
+            </span>
+            <span>
+              <Link href='#'>
+                <FaTwitter size={40} />
+              </Link>
+            </span>
+            <span>
+              <Link href='#'>
+                <FaEnvelope size={40} />
+              </Link>
+            </span>
+          </div>
+          <nav className='footer-menu'>
+            <ul>
+              <li>
+                <Link href='#'>Home</Link>
+              </li>
+              <li>
+                <Link href='#'>Explorar</Link>
+              </li>
+              <li>
+                <Link href='#'>Sobre</Link>
+              </li>
+              <li>
+                <Link href='#'>Contato</Link>
+              </li>
+            </ul>
+          </nav>
+          <span className='copyright'>
+            {new Date().getFullYear()} {'\u00A9'} Todos os direitos reservados -
+            Elian Campos{' '}
+          </span>
+        </footer>
       </main>
     </>
   );

@@ -13,6 +13,10 @@ button {
   border-radius: 30px;
   border: 0;
   padding: 15px 20px;
+  transition: background-color 0.5s;
+}
+button:hover {
+  background-color: #1c6ac4;
 }
 
 .container {

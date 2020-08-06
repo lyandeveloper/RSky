@@ -32,7 +32,7 @@ function Header() {
             align-items: center;
             justify-content: space-between;
             flex-direction: row;
-            padding: 10px 0;
+            padding: 10px 0; 
           }
           header .logo {
             font-weight: bold;

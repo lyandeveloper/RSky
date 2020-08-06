@@ -7,6 +7,7 @@ function House({ imgUrl, price, name, location, rooms, bathrooms }) {
   return (
     <>
       <div className='house'>
+        <span className='overlay'></span>
         <img src={imgUrl} alt={name} />
         <div className='info'>
           <span className='price'>R${price}</span>
@@ -36,8 +37,11 @@ function House({ imgUrl, price, name, location, rooms, bathrooms }) {
           .house {
             position: relative;
             width: 300px;
-            height: 300px;
-            border: 1px solid #eee;
+            height: 300px; 
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-top: 10px;
           }
 
           .house img {
@@ -48,6 +52,24 @@ function House({ imgUrl, price, name, location, rooms, bathrooms }) {
             border-radius: 10px;
           }
 
+          .overlay {
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            background: rgba(0,0,0,0);
+            border-radius: 10px;
+            z-index: 1;
+            transition: background 0.5s;
+          }
+
+          .house:hover .overlay {
+            background: rgba(0,0,0,0.3);
+          }
+
+          .house:hover {
+            transform: scale(1.01);
+          }
+
           .info {
             position: absolute;
             width: 100%;
@@ -55,6 +77,9 @@ function House({ imgUrl, price, name, location, rooms, bathrooms }) {
             background: #fff;
             box-shadow: 0px 11px 50px -28px rgba(10,10,10,1);
             padding: 10px;
+            z-index: 2;
+            border: 1px solid #eee;
+            border-radius: 10px 10px 0 0;
           }
 
           .price {
