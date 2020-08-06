@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 // import { Container } from './styles';
 
 function Header() {
   return (
     <header className='container'>
       <div className='logo'>
-        <span>R</span> .State
+        <span>RS</span>ky
       </div>
       <nav>
         <ul>

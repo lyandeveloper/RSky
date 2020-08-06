@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FaArrowRight } from 'react-icons/fa';
+import {
+  FaArrowRight,
+  FaSearch,
+  FaMeetup,
+  FaHandshake,
+  FaPiggyBank,
+} from 'react-icons/fa';
 import Header from '../components/Header';
 import House from '../components/House';
 
@@ -9,7 +15,7 @@ export default function App() {
   return (
     <>
       <Head>
-        <title>R.State</title>
+        <title>RSky</title>
         <link rel='icon' href='/favicon.ico' />
         <link
           href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'
@@ -168,6 +174,45 @@ export default function App() {
             </SwiperSlide>
           </Swiper>
         </section>
+
+        <session className='how-works'>
+          <span>Serviços</span>
+          <h2>Como funciona</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi,
+            veritatis! Quisquam perspiciatis quidem cum voluptas libero.
+          </p>
+
+          <div className='services-wrapper container'>
+            <div className='service'>
+              <FaSearch size={30} color='#2289ff' />
+              <span>Encontre um lar</span>
+              <p>
+                Seja um apartamento ou uma casa simples. Encontre propriedades
+                de diversos tipos preços e escolha uma de acordo com seu gosto
+              </p>
+            </div>
+
+            <div className='service'>
+              <FaHandshake size={30} color='#2289ff' />
+              <span>Corretores</span>
+              <p>
+                Nosso sistema consta com uma gama de corretores, você pode
+                filtrar pelos melhores corretores e também avalia-los de acordo
+                com seus serviços
+              </p>
+            </div>
+
+            <div className='service'>
+              <FaPiggyBank size={30} color='#2289ff' />
+              <span>Seja um vendedor</span>
+              <p>
+                Caso não queira comprar uma propriedade e queira vender uma,
+                você também pode colocar suas propriedades a venda
+              </p>
+            </div>
+          </div>
+        </session>
       </main>
     </>
   );

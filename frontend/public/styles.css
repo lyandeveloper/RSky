@@ -146,3 +146,61 @@ section.about-us {
   font-weight: bold;
   font-size: 14px;
 }
+
+.how-works {
+  min-height: 800px;
+  width: 100%;
+}
+
+.how-works > span {
+  display: flex;
+  justify-content: center;
+  color: #2289ff;
+}
+
+.how-works > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #314862;
+}
+
+.how-works > p {
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+.services-wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.services-wrapper .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-wrapper span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #222;
+}
+
+.services-wrapper p {
+  font-size: 14px;
+  margin-top: 20px;
+  width: 300px;
+  color: #555;
+}
