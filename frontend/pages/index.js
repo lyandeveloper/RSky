@@ -1,5 +1,9 @@
-import Head from "next/head";
-import Header from "../components/Header";
+import Head from 'next/head';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaArrowRight } from 'react-icons/fa';
+import Header from '../components/Header';
+import House from '../components/House';
 
 export default function App() {
   return (
@@ -8,7 +12,7 @@ export default function App() {
         <title>R.State</title>
         <link rel='icon' href='/favicon.ico' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'
           rel='stylesheet'
         />
       </Head>
@@ -92,128 +96,43 @@ export default function App() {
             <button className='btn-about'>Saiba Mais</button>
           </div>
         </section>
+
+        <section className='recent container'>
+          <span className='recent-sub'>Recentes</span>
+          <h2>Propriedades recentes</h2>
+          <span className='recent-link'>
+            <Link href='#'>Explorar mais</Link>
+            <FaArrowRight size={14} color='#314862' />
+          </span>
+
+          <Swiper
+            spaceBetween={150}
+            slidesPerView={4}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            <SwiperSlide>
+              <House />
+            </SwiperSlide>
+            ...
+          </Swiper>
+        </section>
       </main>
-
-      <style>{`
-        .hero {
-          display: flex;
-          flex-direction: row; 
-          justify-content: space-between;
-          width: 100%;
-          min-height: 900px;
-          margin-top: 20px;
-        }
-        
-        .hero-banner {
-          position: relative;
-          width: 600px;
-          height: 600px; 
-        }
-
-        .hero-banner img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 100%;
-        }
-
-        .hero-text {
-          position: relative;
-          top: 200px;
-          width: 500px;
-          padding: 10px;
-        }
-
-        .hero-text h2 {
-          font-size: 32px;
-          color: #314862;
-          font-weight: normal;
-        }
-
-        .hero-text p {
-          margin-top: 10px;
-          font-weight: lighter;
-          color: #555;
-        }
-
-        .hero button {
-          padding: 15px 20px;; 
-          margin-top: 10px; 
-        }
-
-        form {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center; 
-          box-shadow: 0px 11px 37px -28px rgba(107,107,107,1);
-          padding: 30px 0;
-        }
-
-        form label {
-          display: flex;
-          flex-direction: column;
-          color: #314862;
-        }
-
-        label input {
-          margin-top: 10px;
-          margin-right: 30px;
-          padding: 8px;
-          border: 1px solid #ccc;
-          border-radius: 10px;
-        }
-
-        form button {
-          padding: 20px 30px;   
-          margin-top: 20px; 
-        }
-
-        section.about-us {
-          margin-top: 100px;
-          min-height: 800px;
-          display: flex;
-        }
-
-        .about-img {
-          position: relative;
-          width: 200em;
-          height: 520px
-        }
-
-        .about-img img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 4px;
-        }
-
-        .about-text {
-          margin-left: 20px;
-        }
-
-        .about-text span {
-          color: #2289ff;
-        }
-
-        .about-text h2 {
-          font-size: 32px;
-          font-weight: normal;
-          color: #314862;
-        }
-
-        .about-text p{
-          margin-top: 20px;
-          font-weight: lighter;
-          color: #555;
-        }
-
-        .btn-about {
-          margin-top: 20px;
-        }
-      `}</style>
     </>
   );
 }
