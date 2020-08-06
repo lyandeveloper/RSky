@@ -3,28 +3,28 @@ import { FaBed, FaToilet, FaMapMarkerAlt } from 'react-icons/fa';
 import Link from 'next/link';
 // import { Container } from './styles';
 
-function House() {
+function House({ imgUrl, price, name, location, rooms, bathrooms }) {
   return (
     <>
       <div className='house'>
-        <img src='https://wallpaperaccess.com/full/259715.jpg' alt='house' />
+        <img src={imgUrl} alt={name} />
         <div className='info'>
-          <span className='price'>R$80.000</span>
+          <span className='price'>R${price}</span>
           <div className='house-header-wrapper'>
             <div className='house-header'>
-              <span className='house-name'>Palace</span>
+              <span className='house-name'>{name}</span>
               <span className='house-location'>
-                <FaMapMarkerAlt color='#314862' /> Toronto, Canadá
+                <FaMapMarkerAlt color='#314862' /> {location}
               </span>
             </div>
             <div className='house-rooms'>
               <span className='house-icons'>
                 <FaBed color='#314862' />
-                <span>4</span>
+                <span>{rooms}</span>
               </span>
               <span className='house-icons'>
                 <FaToilet color='#314862' />
-                <span>2</span>
+                <span>{bathrooms}</span>
               </span>
             </div>
           </div>
