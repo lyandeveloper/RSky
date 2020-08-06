@@ -37,6 +37,7 @@ function House({ imgUrl, price, name, location, rooms, bathrooms }) {
             position: relative;
             width: 300px;
             height: 300px;
+            border: 1px solid #eee;
           }
 
           .house img {

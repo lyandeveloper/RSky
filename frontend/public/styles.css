@@ -188,7 +188,7 @@ section.about-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50%;
 }
 
 .services-wrapper span {
@@ -203,4 +203,54 @@ section.about-us {
   margin-top: 20px;
   width: 300px;
   color: #555;
+}
+
+.highlights {
+  position: relative;
+  top: 300px;
+}
+
+.highlights > span {
+  display: flex;
+  justify-content: center;
+  color: #2289ff;
+}
+
+.highlights > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #314862;
+}
+
+.highlights > p {
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+}
+
+.houses {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 110px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highlights > button {
+  margin-top: 110px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
