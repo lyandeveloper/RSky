@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Head from "next/head";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   FaArrowRight,
   FaSearch,
@@ -11,26 +11,27 @@ import {
   FaInstagram,
   FaTwitter,
   FaEnvelope,
-} from 'react-icons/fa';
-import Header from '../components/Header';
-import House from '../components/House';
+} from "react-icons/fa";
+import Header from "../components/Header";
+import House from "../components/House";
+import homeStyle from "../public/styles";
 
 export default function App() {
   return (
     <>
       <Head>
         <title>RSky</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
         <link
-          href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'
-          rel='stylesheet'
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
         />
       </Head>
 
       <main>
         <Header />
-        <section className='hero container'>
-          <div className='hero-text'>
+        <section className="hero container">
+          <div className="hero-text">
             <h2>Encontre os melhores lugares para você morar</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
@@ -38,57 +39,57 @@ export default function App() {
               quibusdam molestiae optio ab assumenda consequatur nulla suscipit
               earum odio natus enim temporibus?
             </p>
-            <button type='button'>Saiba mais</button>
+            <button type="button">Saiba mais</button>
           </div>
-          <div className='hero-banner'>
+          <div className="hero-banner">
             <img
-              src='https://www.richardmeier.com/wp-content/uploads/2019/06/685_1920x1080-min-1.jpg'
-              alt=''
+              src="https://www.richardmeier.com/wp-content/uploads/2019/06/685_1920x1080-min-1.jpg"
+              alt=""
             />
           </div>
         </section>
 
-        <section className='search container'>
-          <form action=''>
-            <label htmlFor='location'>
+        <section className="search container">
+          <form action="">
+            <label htmlFor="location">
               Localização
               <input
-                type='text'
-                name='location'
-                id='location'
-                placeholder='Brazil'
+                type="text"
+                name="location"
+                id="location"
+                placeholder="Brazil"
               />
             </label>
-            <label htmlFor='property-type'>
+            <label htmlFor="property-type">
               Tipo de propriedade
               <input
-                type='text'
-                name='property-type'
-                id='property-type'
-                placeholder='Apartamento'
+                type="text"
+                name="property-type"
+                id="property-type"
+                placeholder="Apartamento"
               />
             </label>
-            <label htmlFor='max-price'>
+            <label htmlFor="max-price">
               Preço máximo
               <input
-                type='text'
-                name='max-price'
-                id='max-price'
-                placeholder='R$ 600'
+                type="text"
+                name="max-price"
+                id="max-price"
+                placeholder="R$ 600"
               />
             </label>
-            <button type='submit'>Procurar</button>
+            <button type="submit">Procurar</button>
           </form>
         </section>
 
-        <section className='about-us container'>
-          <div className='about-img'>
+        <section className="about-us container">
+          <div className="about-img">
             <img
-              src='https://data.1freewallpapers.com/download/mansion-a-ferrari-what-a-dream.jpg'
-              alt=''
+              src="https://data.1freewallpapers.com/download/mansion-a-ferrari-what-a-dream.jpg"
+              alt=""
             />
           </div>
-          <div className='about-text'>
+          <div className="about-text">
             <span>Sobre nós</span>
             <h2>Nós providenciamos as melhores propriedades para você!</h2>
             <p>
@@ -103,83 +104,83 @@ export default function App() {
               expedita temporibus repudiandae quasi velit atque, vel debitis
             </p>
 
-            <button className='btn-about'>Saiba Mais</button>
+            <button className="btn-about">Saiba Mais</button>
           </div>
         </section>
 
-        <section className='recent container'>
-          <span className='recent-sub'>Recentes</span>
+        <section className="recent container">
+          <span className="recent-sub">Recentes</span>
           <h2>Propriedades recentes</h2>
-          <span className='recent-link'>
-            <Link href='#'>Explorar mais</Link>
-            <FaArrowRight size={14} color='#314862' />
+          <span className="recent-link">
+            <Link href="#">Explorar mais</Link>
+            <FaArrowRight size={14} color="#314862" />
           </span>
 
           <Swiper spaceBetween={150} slidesPerView={4}>
             <SwiperSlide>
               <House
-                imgUrl='https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg'
-                name='Palace'
-                location='Toronto, Canadá'
+                imgUrl="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
+                name="Palace"
+                location="Toronto, Canadá"
                 rooms={5}
                 bathrooms={3}
-                price='240.000'
+                price="240.000"
               />
             </SwiperSlide>
             <SwiperSlide>
               <House
-                imgUrl='https://europetrippers.files.wordpress.com/2013/04/10597113.jpg'
-                name='Skb House'
-                location='Amsterdã, Holanda'
+                imgUrl="https://europetrippers.files.wordpress.com/2013/04/10597113.jpg"
+                name="Skb House"
+                location="Amsterdã, Holanda"
                 rooms={6}
                 bathrooms={4}
-                price='200.000'
+                price="200.000"
               />
             </SwiperSlide>
             <SwiperSlide>
               <House
-                imgUrl='https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984'
-                name='Atisha Palace'
-                location='Las Vegas, Eua'
+                imgUrl="https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984"
+                name="Atisha Palace"
+                location="Las Vegas, Eua"
                 rooms={4}
                 bathrooms={3}
-                price='180.000'
+                price="180.000"
               />
             </SwiperSlide>
             <SwiperSlide>
               <House
-                imgUrl='https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg'
-                name='S Palace'
-                location='Califórnia, Eua'
+                imgUrl="https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg"
+                name="S Palace"
+                location="Califórnia, Eua"
                 rooms={4}
                 bathrooms={2}
-                price='150.000'
+                price="150.000"
               />
             </SwiperSlide>
             <SwiperSlide>
               <House
-                imgUrl='https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg'
-                name='SA Villa'
-                location='Rio de Janeiro, Brasil'
+                imgUrl="https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg"
+                name="SA Villa"
+                location="Rio de Janeiro, Brasil"
                 rooms={3}
                 bathrooms={3}
-                price='120.000'
+                price="120.000"
               />
             </SwiperSlide>
             <SwiperSlide>
               <House
-                imgUrl='https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg'
-                name='A Place'
-                location='São Paulo, Brasil'
+                imgUrl="https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg"
+                name="A Place"
+                location="São Paulo, Brasil"
                 rooms={2}
                 bathrooms={3}
-                price='80.000'
+                price="80.000"
               />
             </SwiperSlide>
           </Swiper>
         </section>
 
-        <session className='how-works'>
+        <session className="how-works">
           <span>Serviços</span>
           <h2>Como funciona</h2>
           <p>
@@ -187,9 +188,9 @@ export default function App() {
             veritatis! Quisquam perspiciatis quidem cum voluptas libero.
           </p>
 
-          <div className='services-wrapper container'>
-            <div className='service'>
-              <FaSearch size={30} color='#2289ff' />
+          <div className="services-wrapper container">
+            <div className="service">
+              <FaSearch size={30} color="#2289ff" />
               <span>Encontre um lar</span>
               <p>
                 Seja um apartamento ou uma casa simples. Encontre propriedades
@@ -197,8 +198,8 @@ export default function App() {
               </p>
             </div>
 
-            <div className='service'>
-              <FaHandshake size={30} color='#2289ff' />
+            <div className="service">
+              <FaHandshake size={30} color="#2289ff" />
               <span>Corretores</span>
               <p>
                 Nosso sistema consta com uma gama de corretores, você pode
@@ -207,8 +208,8 @@ export default function App() {
               </p>
             </div>
 
-            <div className='service'>
-              <FaPiggyBank size={30} color='#2289ff' />
+            <div className="service">
+              <FaPiggyBank size={30} color="#2289ff" />
               <span>Seja um vendedor</span>
               <p>
                 Caso não queira comprar uma propriedade e queira vender uma,
@@ -218,7 +219,7 @@ export default function App() {
           </div>
         </session>
 
-        <session className='highlights'>
+        <session className="highlights">
           <span>Destaques</span>
           <h2>Propriedades em destaque</h2>
           <p>
@@ -226,124 +227,125 @@ export default function App() {
             veritatis! Quisquam perspiciatis quidem cum voluptas libero.
           </p>
 
-          <div className='houses container'>
+          <div className="houses container">
             <House
-              imgUrl='https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg'
-              name='Palace'
-              location='Toronto, Canadá'
+              imgUrl="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
+              name="Palace"
+              location="Toronto, Canadá"
               rooms={5}
               bathrooms={3}
-              price='240.000'
+              price="240.000"
             />
             <House
-              imgUrl='https://europetrippers.files.wordpress.com/2013/04/10597113.jpg'
-              name='Skb House'
-              location='Amsterdã, Holanda'
+              imgUrl="https://europetrippers.files.wordpress.com/2013/04/10597113.jpg"
+              name="Skb House"
+              location="Amsterdã, Holanda"
               rooms={6}
               bathrooms={4}
-              price='200.000'
+              price="200.000"
             />
             <House
-              imgUrl='https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984'
-              name='Atisha Palace'
-              location='Las Vegas, Eua'
+              imgUrl="https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984"
+              name="Atisha Palace"
+              location="Las Vegas, Eua"
               rooms={4}
               bathrooms={3}
-              price='180.000'
+              price="180.000"
             />
             <House
-              imgUrl='https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg'
-              name='S Palace'
-              location='Califórnia, Eua'
+              imgUrl="https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg"
+              name="S Palace"
+              location="Califórnia, Eua"
               rooms={4}
               bathrooms={2}
-              price='150.000'
+              price="150.000"
             />
             <House
-              imgUrl='https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg'
-              name='SA Villa'
-              location='Rio de Janeiro, Brasil'
+              imgUrl="https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg"
+              name="SA Villa"
+              location="Rio de Janeiro, Brasil"
               rooms={3}
               bathrooms={3}
-              price='120.000'
+              price="120.000"
             />
             <House
-              imgUrl='https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg'
-              name='A Place'
-              location='São Paulo, Brasil'
+              imgUrl="https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg"
+              name="A Place"
+              location="São Paulo, Brasil"
               rooms={2}
               bathrooms={3}
-              price='80.000'
+              price="80.000"
             />
           </div>
 
-          <button type='button'>Carregar mais</button>
+          <button type="button">Carregar mais</button>
         </session>
 
-        <session className='help'>
+        <session className="help">
           <h2>Alguma dúvida?</h2>
           <h2>Deixe-nos ajudar você</h2>
 
-          <form className='container' action=''>
+          <form className="container" action="">
             <input
-              type='email'
-              name='email'
-              id='email'
-              placeholder='Digite seu e-mail'
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
             />
-            <button type='submit'>Enviar</button>
+            <button type="submit">Enviar</button>
           </form>
         </session>
 
         <footer>
-          <div className='logo'>
+          <div className="logo">
             <span>RS</span>ky
           </div>
 
-          <div className='social-medias'>
+          <div className="social-medias">
             <span>
-              <Link href='#'>
+              <Link href="#">
                 <FaFacebook size={40} />
               </Link>
             </span>
             <span>
-              <Link href='#'>
+              <Link href="#">
                 <FaInstagram size={40} />
               </Link>
             </span>
             <span>
-              <Link href='#'>
+              <Link href="#">
                 <FaTwitter size={40} />
               </Link>
             </span>
             <span>
-              <Link href='#'>
+              <Link href="#">
                 <FaEnvelope size={40} />
               </Link>
             </span>
           </div>
-          <nav className='footer-menu'>
+          <nav className="footer-menu">
             <ul>
               <li>
-                <Link href='#'>Home</Link>
+                <Link href="#">Home</Link>
               </li>
               <li>
-                <Link href='#'>Explorar</Link>
+                <Link href="#">Explorar</Link>
               </li>
               <li>
-                <Link href='#'>Sobre</Link>
+                <Link href="#">Sobre</Link>
               </li>
               <li>
-                <Link href='#'>Contato</Link>
+                <Link href="#">Contato</Link>
               </li>
             </ul>
           </nav>
-          <span className='copyright'>
-            {new Date().getFullYear()} {'\u00A9'} Todos os direitos reservados -
-            Elian Campos{' '}
+          <span className="copyright">
+            {new Date().getFullYear()} {"\u00A9"} Todos os direitos reservados -
+            Elian Campos{" "}
           </span>
         </footer>
       </main>
+      <style jsx>{homeStyle}</style>
     </>
   );
 }
