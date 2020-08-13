@@ -1,25 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 // import { Container } from './styles';
 
 function Header() {
   return (
-    <header className='container'>
-      <div className='logo'>
+    <header className="container">
+      <div className="logo">
         <span>RS</span>ky
       </div>
       <nav>
         <ul>
-          <Link href='#'>
+          <Link href="#">
             <li>Home</li>
           </Link>
-          <Link href='#'>
+          <Link href="/explore">
             <li>Explorar</li>
           </Link>
-          <Link href='#'>
+          <Link href="#">
             <li>Sobre</li>
           </Link>
-          <Link href='#'>
+          <Link href="#">
             <li>Contato</li>
           </Link>
         </ul>
@@ -37,6 +37,7 @@ function Header() {
           header .logo {
             font-weight: bold;
             font-size: 28px;
+            color: #888;
           }
 
           .logo span {
