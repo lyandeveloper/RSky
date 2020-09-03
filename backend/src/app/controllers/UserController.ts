@@ -18,6 +18,15 @@ class UserController {
 
     return res.json(users);
   }
+
+  async updateUser(req: Request, res: Response): Promise<Response> {
+    const { userId } = req.params;
+    const user = req.body;
+    const userRepository = getRepository(User);
+    await userRepository.update(userId, user);
+
+    return res.json(user);
+  }
 }
 
 export default new UserController();
