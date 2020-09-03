@@ -112,7 +112,7 @@ export default function App() {
           <span className="recent-sub">Recentes</span>
           <h2>Propriedades recentes</h2>
           <span className="recent-link">
-            <Link href="#">Explorar mais</Link>
+            <a href="#">Explorar mais</a>
             <FaArrowRight size={14} color="#314862" />
           </span>
 
@@ -326,16 +326,16 @@ export default function App() {
           <nav className="footer-menu">
             <ul>
               <li>
-                <Link href="#">Home</Link>
+                <a href="#">Home</a>
               </li>
               <li>
-                <Link href="#">Explorar</Link>
+                <a href="#">Explorar</a>
               </li>
               <li>
-                <Link href="#">Sobre</Link>
+                <a href="#">Sobre</a>
               </li>
               <li>
-                <Link href="#">Contato</Link>
+                <a href="#">Contato</a>
               </li>
             </ul>
           </nav>
