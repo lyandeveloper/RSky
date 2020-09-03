@@ -1,10 +1,10 @@
-import "dotenv/config";
-import express, { Request, Response, ErrorRequestHandler } from "express";
-import cors from "cors";
-import path from "path";
-import "reflect-metadata";
-import routes from "./routes";
-import "./database";
+import 'reflect-metadata';
+import 'dotenv/config';
+import express, { Request, Response, ErrorRequestHandler } from 'express';
+import cors from 'cors';
+import path from 'path';
+import routes from './routes';
+import './database';
 
 class App {
   public server: express.Application;
@@ -20,8 +20,8 @@ class App {
     this.server.use(express.json());
     this.server.use(this.ClientErrorHandler);
     this.server.use(
-      "/uploads",
-      express.static(path.resolve(__dirname, "..", "tmp", "uploads"))
+      '/uploads',
+      express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
   }
 
@@ -32,14 +32,14 @@ class App {
     next: Function
   ) {
     if (req.xhr) {
-      res.status(500).send({ error: "Something went wrong..." });
+      res.status(500).send({ error: 'Something went wrong...' });
     } else {
       next(err);
     }
   }
 
   private NotFoundError(req: Request, res: Response) {
-    res.status(404).send({ error: "Not found" });
+    res.status(404).send({ error: 'Not found' });
   }
 
   private routes(): void {
