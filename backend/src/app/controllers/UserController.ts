@@ -27,6 +27,14 @@ class UserController {
 
     return res.json(user);
   }
+
+  async deleteUser(req: Request, res: Response): Promise<Response> {
+    const { userId } = req.params;
+    const userRepository = getRepository(User);
+    await userRepository.delete(userId);
+
+    return res.json({ message: 'User delete with success!' });
+  }
 }
 
 export default new UserController();
