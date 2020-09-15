@@ -43,23 +43,16 @@ function sideBar() {
 
         <section className="category">
           <h2>Categoria</h2>
-          <div className="input">
-            <input type="checkbox" name="house" id="" value="house" />
-            <label>Casa</label>
-          </div>
-          <div className="input">
-            <input type="checkbox" name="apartment" id="" value="apartment" />
-            <label>Apartamento</label>
-          </div>
-          <div className="input">
-            <input
-              type="checkbox"
-              name="beach-house"
-              id=""
-              value="beach-house"
-            />
-            <label>Casa de Praia</label>
-          </div>
+          <select name="category" id="">
+            <option value="">Todos os imóveis</option>
+            <option value="">Apartamento</option>
+            <option value="">Casa</option>
+            <option value="">Casa de condomínio</option>
+            <option value="">Cobertura</option>
+            <option value="">Flat</option>
+            <option value="">Loft</option>
+            <option value="">Terreno / Lote / Condomínio</option>
+          </select>
         </section>
 
         <section className="bathroom">
@@ -85,37 +78,39 @@ function sideBar() {
 
         <section className="features">
           <h2>Recursos</h2>
-          <div className="input">
-            <div className="input-detail">
-              <input type="checkbox" name="garden" id="" value="garden" />
-              <label>Jardim</label>
+          <div className="features-wrapper">
+            <div className="features-input">
+              <div className="input-detail">
+                <input type="checkbox" name="garden" id="" value="garden" />
+                <label>Jardim</label>
+              </div>
+
+              <div className="input-detail">
+                <input type="checkbox" name="garage" id="" value="garage" />
+                <label>Garagem</label>
+              </div>
+
+              <div className="input-detail">
+                <input type="checkbox" name="balcony" id="" value="balcony" />
+                <label>Sacada</label>
+              </div>
             </div>
 
-            <div className="input-detail">
-              <input type="checkbox" name="garage" id="" value="garage" />
-              <label>Garagem</label>
-            </div>
+            <div className="features-input">
+              <div className="input-detail">
+                <input type="checkbox" name="air" id="" value="air" />
+                <label>Ar </label>
+              </div>
 
-            <div className="input-detail">
-              <input type="checkbox" name="balcony" id="" value="balcony" />
-              <label>Sacada</label>
-            </div>
-          </div>
+              <div className="input-detail">
+                <input type="checkbox" name="laundry" id="" value="laundry" />
+                <label>Lavanderia</label>
+              </div>
 
-          <div className="input">
-            <div className="input-detail">
-              <input type="checkbox" name="air" id="" value="air" />
-              <label>Ar Condicionado</label>
-            </div>
-
-            <div className="input-detail">
-              <input type="checkbox" name="laundry" id="" value="laundry" />
-              <label>Lavanderia</label>
-            </div>
-
-            <div className="input-detail">
-              <input type="checkbox" name="backwayd" id="" value="backyard" />
-              <label>Quintal</label>
+              <div className="input-detail">
+                <input type="checkbox" name="backwayd" id="" value="backyard" />
+                <label>Quintal</label>
+              </div>
             </div>
           </div>
         </section>
@@ -164,9 +159,13 @@ function sideBar() {
           margin-left: 20px;
         }
 
-        .features {
-          display: flex;
-          flex-direction: row;
+        .features-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-left: 20px;
+        }
+
+        .features-input {
         }
       `}</style>
     </>
