@@ -17,11 +17,7 @@ function HeaderSecondary() {
             />
           </form>
           <div className="profile">
-            <img
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-              alt=""
-            />
-            <span className="user-name">Johny Walker</span>
+            <button>Criar Conta</button>
           </div>
         </div>
 

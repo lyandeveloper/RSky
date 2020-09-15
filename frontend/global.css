@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 button {
@@ -15,6 +15,18 @@ button {
   padding: 15px 20px;
   transition: background-color 0.5s;
 }
+
+.button-secondary {
+  background: none;
+  color: #2289ff;
+  transition: color 0.5s;
+}
+
+.button-secondary:hover {
+  background: none;
+  color: #1c6ac4;
+}
+
 button:hover {
   background-color: #1c6ac4;
 }

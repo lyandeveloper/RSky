@@ -120,7 +120,7 @@ function sideBar() {
         .filter {
           top: 0;
           width: 300px;
-          height: 100%;
+          height: 100vh;
           position: sticky;
           box-shadow: 3px 0px 8px 0px rgba(204, 204, 204, 1);
           background: #fff;

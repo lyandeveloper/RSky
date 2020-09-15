@@ -1,130 +1,120 @@
-import React from 'react';
-import { FaBed, FaToilet, FaMapMarkerAlt } from 'react-icons/fa';
-import Link from 'next/link';
+import React from "react";
+import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from "react-icons/fa";
 // import { Container } from './styles';
 
-function House({ imgUrl, price, name, location, rooms, bathrooms }) {
+function House() {
   return (
     <>
-      <div className='house'>
-        <span className='overlay'></span>
-        <img src={imgUrl} alt={name} />
-        <div className='info'>
-          <span className='price'>R${price}</span>
-          <div className='house-header-wrapper'>
-            <div className='house-header'>
-              <span className='house-name'>{name}</span>
-              <span className='house-location'>
-                <FaMapMarkerAlt color='#314862' /> {location}
-              </span>
+      <a href="" className="house-container">
+        <img
+          src="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
+          alt=""
+        />
+        <div className="house-info">
+          <div className="house-header">
+            <h2>R$ 280.000</h2>
+            <FaRegHeart color="#2289ff" />
+          </div>
+          <div className="house-body">
+            <div className="house-body-category">CASA</div>
+            <div className="house-body-description">
+              Casa térrea com sala de estar , sala de jantar , cozinha, 3
+              dormitórios
             </div>
-            <div className='house-rooms'>
-              <span className='house-icons'>
-                <FaBed color='#314862' />
-                <span>{rooms}</span>
-              </span>
-              <span className='house-icons'>
-                <FaToilet color='#314862' />
-                <span>{bathrooms}</span>
-              </span>
+            <div className="house-body-place">Ubajara-CE, Centro</div>
+          </div>
+          <div className="house-footer">
+            <div className="house-footer-features">
+              <div className="house-footer-items">
+                <FaObjectUngroup color="#2289ff" size={20} />
+                <span>150m2</span>
+              </div>
+              <div className="house-footer-items">
+                <FaToilet color="#2289ff" size={20} />
+                <span>2</span>
+              </div>
+              <div className="house-footer-items">
+                <FaBed color="#2289ff" size={20} />
+                <span>3</span>
+              </div>
+            </div>
+            <div className="house-footer-contact">
+              <button className="button-secondary">Telefone</button>
+              <button>Mensagem</button>
             </div>
           </div>
         </div>
-      </div>
+      </a>
 
-      <style>
-        {`
-          .house {
-            position: relative;
-            width: 300px;
-            height: 300px; 
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.5s;
-            margin-top: 10px;
-          }
+      <style jsx>{`
+        .house-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background: #fff;
+          margin-top: 20px;
+          margin-left: 20px;
+          box-shadow: 3px 0px 8px 0px rgba(204, 204, 204, 1);
+          text-decoration: none;
+          color: #444;
+        }
 
-          .house img {
-            position: absolute;
-            width: 100%;
-            height: 80%;
-            object-fit: cover;
-            border-radius: 10px;
-          }
+        .house-container img {
+          width: 400px;
+        }
 
-          .overlay {
-            position: absolute;
-            width: 100%;
-            height: 80%;
-            background: rgba(0,0,0,0);
-            border-radius: 10px;
-            z-index: 1;
-            transition: background 0.5s;
-          }
+        .house-header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-          .house:hover .overlay {
-            background: rgba(0,0,0,0.3);
-          }
+        .house-header > h2 {
+          color: #444;
+        }
 
-          .house:hover {
-            transform: scale(1.01);
-          }
+        .house-info {
+          margin-left: 20px;
+          padding: 0 20px;
+        }
 
-          .info {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            background: #fff;
-            box-shadow: 0px 11px 50px -28px rgba(10,10,10,1);
-            padding: 10px;
-            z-index: 2;
-            border: 1px solid #eee;
-            border-radius: 10px 10px 0 0;
-          }
+        .house-body-description {
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 300;
+        }
 
-          .price {
-            display: flex;
-            justify-content: flex-end;
-            font-size: 22px; 
-            color: #314862;
-          }
+        .house-body-place {
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 300;
+        }
 
-          .house-header-wrapper {
-            display: flex; 
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: baseline;
-          }
+        .house-footer {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-          .house-header {
-            display: flex;
-            flex-direction: column;
-          }
+        .house-footer-features {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
 
-          .house-name {
-            font-size: 22px; 
-            font-weight: 600;
-            color: #314862;
-          }
+        .house-footer-items {
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+        }
 
-          .house-location {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            font-weight: lighter;
-            color: #222;
-          }
-
-          .house-icons:first-child {
-            margin-right: 10px;
-          }
-
-          .house-icons span {
-            margin-left: 2px;
-            color: #314862;
-          }
-      `}
-      </style>
+        .house-footer-items span {
+          margin-left: 5px;
+        }
+      `}</style>
     </>
   );
 }

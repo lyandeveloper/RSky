@@ -13,7 +13,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import Header from "../components/Header";
-import House from "../components/House";
+import House from "../components/HouseHome";
 import homeStyle from "../public/styles";
 
 export default function App() {
