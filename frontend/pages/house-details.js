@@ -10,6 +10,7 @@ import {
   FaRegHeart,
   FaShare,
 } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 // import { Container } from './styles';
 
@@ -111,7 +112,6 @@ function HouseDetails() {
           </div>
         </section>
       </section>
-
       <style jsx>{`
         .house-details-body {
           margin-bottom: 20px;
