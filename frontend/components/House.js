@@ -2,40 +2,43 @@ import React from "react";
 import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from "react-icons/fa";
 // import { Container } from './styles';
 
-function House() {
+function House({
+  imgUrl,
+  price,
+  category,
+  description,
+  location,
+  area,
+  bathrooms,
+  rooms,
+}) {
   return (
     <>
       <a href="" className="house-container">
-        <img
-          src="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
-          alt=""
-        />
+        <img src={imgUrl} alt="" />
         <div className="house-info">
           <div className="house-header">
-            <h2>R$ 280.000</h2>
+            <h2>{`R$ ${price}`}</h2>
             <FaRegHeart color="#2289ff" />
           </div>
           <div className="house-body">
-            <div className="house-body-category">CASA</div>
-            <div className="house-body-description">
-              Casa térrea com sala de estar , sala de jantar , cozinha, 3
-              dormitórios
-            </div>
-            <div className="house-body-place">Ubajara-CE, Centro</div>
+            <div className="house-body-category">{category}</div>
+            <div className="house-body-description">{description}</div>
+            <div className="house-body-place">{location}</div>
           </div>
           <div className="house-footer">
             <div className="house-footer-features">
               <div className="house-footer-items">
                 <FaObjectUngroup color="#2289ff" size={20} />
-                <span>150m2</span>
+                <span>{area}</span>
               </div>
               <div className="house-footer-items">
                 <FaToilet color="#2289ff" size={20} />
-                <span>2</span>
+                <span>{bathrooms}</span>
               </div>
               <div className="house-footer-items">
                 <FaBed color="#2289ff" size={20} />
-                <span>3</span>
+                <span>{rooms}</span>
               </div>
             </div>
             <div className="house-footer-contact">
@@ -77,6 +80,7 @@ function House() {
         .house-info {
           margin-left: 20px;
           padding: 0 20px;
+          width: 100%;
         }
 
         .house-body-description {

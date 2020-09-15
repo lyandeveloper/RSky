@@ -157,6 +157,7 @@ function sideBar() {
 
         select {
           margin-left: 20px;
+          outline: 0;
         }
 
         .features-wrapper {
