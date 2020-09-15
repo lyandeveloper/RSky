@@ -28,16 +28,16 @@ function HeaderSecondary() {
         <nav>
           <ul>
             <li>
-              <a href="">Categorias</a>
+              <a href="">Compra</a>
             </li>
             <li>
-              <a href="">Corretores</a>
+              <a href="">Aluguel</a>
             </li>
             <li>
-              <a href="">Vender</a>
+              <a href="">Lançamentos</a>
             </li>
             <li>
-              <a href="">Contato</a>
+              <a href="">Central de Ajuda</a>
             </li>
           </ul>
         </nav>
