@@ -17,7 +17,7 @@ function HeaderSecondary() {
             />
           </form>
           <div className="profile">
-            <button>Criar Conta</button>
+            <button>Cadastre-se</button>
           </div>
         </div>
 

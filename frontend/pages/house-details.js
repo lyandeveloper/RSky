@@ -33,6 +33,14 @@ function HouseDetails() {
             <SwiperSlide>
               <div className="house-img-slide">
                 <img
+                  src="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="house-img-slide">
+                <img
                   src="https://p0.pikist.com/photos/827/31/living-room-apartment-interior-design-indoors-decoration-room-house-interior-modern.jpg"
                   alt=""
                 />

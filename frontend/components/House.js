@@ -14,7 +14,7 @@ function House({
 }) {
   return (
     <>
-      <a href="" className="house-container">
+      <a href="/house-details" className="house-container">
         <img src={imgUrl} alt="" />
         <div className="house-info">
           <div className="house-header">
