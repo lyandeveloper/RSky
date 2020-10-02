@@ -1,13 +1,9 @@
 import { Router } from 'express';
-import UserController from './app/controllers/UserController';
-import SessionController from './app/controllers/SessionController';
+import { estateController } from './useCases/Estate';
 
 const routes = Router();
 
-routes.post('/user/create', UserController.createUser);
-routes.get('/user/list', UserController.listUsers);
-routes.put('/user/update/:userId', UserController.updateUser);
-routes.delete('/user/delete/:userId', UserController.deleteUser);
-
-routes.post('/session', SessionController.signIn);
+routes.post('/imovel/create', (req, res) => {
+  return estateController.create(req, res);
+});
 export default routes;
