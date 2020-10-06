@@ -9,4 +9,8 @@ export class EstateUseCase {
     const estate = new Estate(data);
     this.estatesRepository.insert(estate);
   }
+
+  async index(data: IEstateDTO) {
+    return this.estatesRepository.findOne(data.id);
+  }
 }

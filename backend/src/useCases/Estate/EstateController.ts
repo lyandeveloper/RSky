@@ -27,4 +27,15 @@ export class EstateController {
         .json({ message: err.message || 'Something went wrong' });
     }
   }
+
+  async index(request: Request, response: Response): Promise<Response> {
+    const { estateId } = request.params;
+    const estate = await this.estateUseCase.index({
+      id: estateId,
+    });
+
+    console.log(estate);
+
+    return response.json(estate);
+  }
 }

@@ -8,4 +8,12 @@ export class DBEstateRepository implements IEstatesRepository {
 
     estateRespository.insert(estate);
   }
+
+  async findOne(id: string): Promise<Estate> {
+    const estateRespository = getRepository('estate');
+
+    const estate: Estate | any = await estateRespository.findOne(id);
+
+    return estate;
+  }
 }
