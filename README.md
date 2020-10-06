@@ -25,7 +25,7 @@
 </p>
 
 
-<img src="https://media.giphy.com/media/bhuUM5BPY8DrktQ0dX/giphy.gif">
+<img src="Hnet-image.gif">
 
 
 <p align="center">
