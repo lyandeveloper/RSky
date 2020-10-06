@@ -56,6 +56,15 @@ This project was developed with the following technologies:
 
 If all goes well, the backend of application will be available at: **http://localhost:3333** and frontend at **http://localhost:3000**. 
 
+## :memo: Todo
+  - Implement the back-end API to front-end
+  - List all estates
+  - Update an estate
+  - Delete an estate
+  - Upload estate images
+  - Filter estates by local, radius, category, price, number of rooms, number of bathrooms, features
+  - Send a email when a user send a messenger
+  - Implement WhatsApp API, when the user click on send message open a new tab to WhatsApp Web directly to the phone number of the company
 ---
 
 Made By ♥ [Elian Campos](https://github.com/lyandeveloper). Add me on [LinkedIn](https://www.linkedin.com/in/elian-campos/) :wave: 
