@@ -11,6 +11,6 @@ export class EstateUseCase {
   }
 
   async index(data: IEstateDTO) {
-    return this.estatesRepository.findOne(data.id);
+    return this.estatesRepository.findOne(data.id, data.slug);
   }
 }

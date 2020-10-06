@@ -9,10 +9,15 @@ export class DBEstateRepository implements IEstatesRepository {
     estateRespository.insert(estate);
   }
 
-  async findOne(id: string): Promise<Estate> {
+  async findOne(id: string, slug: string): Promise<Estate> {
     const estateRespository = getRepository('estate');
 
-    const estate: Estate | any = await estateRespository.findOne(id);
+    const estate: Estate | any = await estateRespository.findOne({
+      where: {
+        id,
+        slug,
+      },
+    });
 
     return estate;
   }

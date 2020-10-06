@@ -29,12 +29,11 @@ export class EstateController {
   }
 
   async index(request: Request, response: Response): Promise<Response> {
-    const { estateId } = request.params;
+    const { estateId, slug } = request.params;
     const estate = await this.estateUseCase.index({
       id: estateId,
+      slug,
     });
-
-    console.log(estate);
 
     return response.json(estate);
   }
