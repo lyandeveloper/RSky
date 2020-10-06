@@ -7,10 +7,10 @@ export class EstateUseCase {
 
   async create(data: IEstateDTO) {
     const estate = new Estate(data);
-    this.estatesRepository.insert(estate);
+    this.estatesRepository.createEstate(estate);
   }
 
   async index(data: IEstateDTO) {
-    return this.estatesRepository.findOne(data.id, data.slug);
+    return this.estatesRepository.findEstateByIdAndSlug(data.id, data.slug);
   }
 }
