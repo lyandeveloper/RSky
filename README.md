@@ -25,7 +25,7 @@
 </p>
 
 
-<img src="Home.png">
+<img src="https://media.giphy.com/media/bhuUM5BPY8DrktQ0dX/giphy.gif">
 
 
 <p align="center">
