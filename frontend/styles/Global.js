@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { MAIN, HOVER } from './Colors';
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -12,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     color: white;
     font-weight: bold;
     cursor: pointer;
-    background-color: #2289ff;
+    background-color: ${MAIN};
     border-radius: 30px;
     border: 0;
     padding: 15px 20px;
@@ -21,17 +22,17 @@ const GlobalStyles = createGlobalStyle`
 
   .button-secondary {
     background: none;
-    color: #2289ff;
+    color: ${MAIN};
     transition: color 0.5s;
   }
 
   .button-secondary:hover {
     background: none;
-    color: #1c6ac4;
+    color: ${HOVER};
   }
 
   button:hover {
-    background-color: #1c6ac4;
+    background-color: ${HOVER};
   }
 
   .container {
