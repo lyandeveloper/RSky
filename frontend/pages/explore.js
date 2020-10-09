@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
-import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Header from "../components/HeaderSecondary";
-import SideBar from "../components/sideBar";
-import House from "../components/House";
+import React from 'react';
+import Head from 'next/head';
+import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Header from '../components/HeaderSecondary';
+import SideBar from '../components/SideBar';
+import House from '../components/House';
 
 SwiperCore.use([Navigation, Pagination, Autoplay, A11y]);
 
