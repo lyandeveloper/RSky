@@ -27,6 +27,7 @@ function Explore() {
           {estates.map((estate) => (
             <Estate
               key={estate.id}
+              url={`/estate/${estate.id}/${estate.slug}`}
               imgUrl={estate.img}
               price={estate.price}
               description={estate.description}

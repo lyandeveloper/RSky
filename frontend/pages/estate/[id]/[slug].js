@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useLayoutEffect, useState, useMemo } from 'react';
 import Head from 'next/head';
-import HeaderSecondary from '../../components/HeaderSecondary';
+import HeaderSecondary from '../../../components/HeaderSecondary';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   FaWhatsapp,
@@ -10,10 +10,26 @@ import {
   FaRegHeart,
   FaShare,
 } from 'react-icons/fa';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import estates from '../../../services/content';
+import { useCallback } from 'react';
 
 // import { Container } from './styles';
 
 function EstateDetails() {
+  const router = useRouter();
+  const { id, slug } = router.query;
+
+  const findEstates = () => {
+    const estate = estates.find(
+      (estate) => estate.id == id && estate.slug == slug
+    );
+    if (!estate) return '';
+
+    return estate;
+  };
+
   return (
     <>
       <Head>
@@ -75,25 +91,25 @@ function EstateDetails() {
         <section className="house-details-body container">
           <div className="house-header-wrapper">
             <div className="house-details-header">
-              <h2>Casa Térrea</h2>
-              <p>Toronto, Canadá</p>
+              <h2>{findEstates().name}</h2>
+              <p>{findEstates().location}</p>
               <div className="house-details-features">
                 <div className="house-features-items">
                   <FaObjectUngroup size={20} color="#2289ff" />
-                  <span>150m2</span>
+                  <span>{findEstates().area}</span>
                 </div>
                 <div className="house-features-items">
                   <FaToilet size={20} color="#2289ff" />
-                  <span>3</span>
+                  <span>{findEstates().bathrooms}</span>
                 </div>
                 <div className="house-features-items">
                   <FaBed size={20} color="#2289ff" />
-                  <span>2</span>
+                  <span>{findEstates().rooms}</span>
                 </div>
               </div>
             </div>
             <div className="house-details-price">
-              <h2>R$ 240.000</h2>
+              <h2>{`R$ ${findEstates().price}`}</h2>
 
               <div className="buttons">
                 <button>
@@ -108,10 +124,7 @@ function EstateDetails() {
           <div className="house-details-description">
             <div className="info">
               <h2>Descrição</h2>
-              <p>
-                Casa térrea com sala de estar , sala de jantar , cozinha, 3
-                banheiros e 2 dormitórios
-              </p>
+              <p>{findEstates().description}</p>
             </div>
             <button className="button-secondary">
               <FaShare /> Compartilhar

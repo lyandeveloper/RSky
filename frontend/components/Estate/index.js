@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from 'react-icons/fa';
 // import { Container } from './styles';
 
 function Estate({
+  url,
   imgUrl,
   price,
   category,
@@ -14,7 +16,7 @@ function Estate({
 }) {
   return (
     <>
-      <a href="/estate" className="house-container">
+      <a href={url} className="house-container">
         <img src={imgUrl} alt="" />
         <div className="house-info">
           <div className="house-header">
