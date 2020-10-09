@@ -14,7 +14,7 @@ function Estate({
 }) {
   return (
     <>
-      <a href="/house-details" className="house-container">
+      <a href="/estate" className="house-container">
         <img src={imgUrl} alt="" />
         <div className="house-info">
           <div className="house-header">

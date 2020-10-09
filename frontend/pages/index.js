@@ -229,7 +229,7 @@ export default function App() {
           </p>
 
           <div className="houses container">
-            <House
+            <RecentEstate
               imgUrl="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
               name="Palace"
               location="Toronto, Canadá"
@@ -237,7 +237,7 @@ export default function App() {
               bathrooms={3}
               price="240.000"
             />
-            <House
+            <RecentEstate
               imgUrl="https://europetrippers.files.wordpress.com/2013/04/10597113.jpg"
               name="Skb House"
               location="Amsterdã, Holanda"
@@ -245,7 +245,7 @@ export default function App() {
               bathrooms={4}
               price="200.000"
             />
-            <House
+            <RecentEstate
               imgUrl="https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984"
               name="Atisha Palace"
               location="Las Vegas, Eua"
@@ -253,7 +253,7 @@ export default function App() {
               bathrooms={3}
               price="180.000"
             />
-            <House
+            <RecentEstate
               imgUrl="https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg"
               name="S Palace"
               location="Califórnia, Eua"
@@ -261,7 +261,7 @@ export default function App() {
               bathrooms={2}
               price="150.000"
             />
-            <House
+            <RecentEstate
               imgUrl="https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg"
               name="SA Villa"
               location="Rio de Janeiro, Brasil"
@@ -269,7 +269,7 @@ export default function App() {
               bathrooms={3}
               price="120.000"
             />
-            <House
+            <RecentEstate
               imgUrl="https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg"
               name="A Place"
               location="São Paulo, Brasil"

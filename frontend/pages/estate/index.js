@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import HeaderSecondary from '../components/HeaderSecondary';
+import HeaderSecondary from '../../components/HeaderSecondary';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   FaWhatsapp,
@@ -10,7 +10,6 @@ import {
   FaRegHeart,
   FaShare,
 } from 'react-icons/fa';
-import Footer from '../components/Footer';
 
 // import { Container } from './styles';
 
