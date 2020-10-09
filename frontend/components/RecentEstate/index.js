@@ -1,9 +1,9 @@
-import React from "react";
-import { FaBed, FaToilet, FaMapMarkerAlt } from "react-icons/fa";
-import Link from "next/link";
+import React from 'react';
+import { FaBed, FaToilet, FaMapMarkerAlt } from 'react-icons/fa';
+import Link from 'next/link';
 // import { Container } from './styles';
 
-function HouseHome({ imgUrl, price, name, location, rooms, bathrooms }) {
+function RecentEstate({ imgUrl, price, name, location, rooms, bathrooms }) {
   return (
     <>
       <div className="house">
@@ -129,4 +129,4 @@ function HouseHome({ imgUrl, price, name, location, rooms, bathrooms }) {
   );
 }
 
-export default HouseHome;
+export default RecentEstate;

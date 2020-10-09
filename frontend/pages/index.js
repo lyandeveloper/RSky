@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Head from 'next/head';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   FaArrowRight,
   FaSearch,
@@ -11,11 +11,11 @@ import {
   FaInstagram,
   FaTwitter,
   FaEnvelope,
-} from "react-icons/fa";
-import Header from "../components/Header";
-import House from "../components/HouseHome";
-import homeStyle from "../public/styles";
-import Footer from "../components/Footer";
+} from 'react-icons/fa';
+import Header from '../components/Header';
+import RecentEstate from '../components/RecentEstate';
+import homeStyle from '../public/styles';
+import Footer from '../components/Footer';
 
 export default function App() {
   return (
@@ -119,7 +119,7 @@ export default function App() {
 
           <Swiper spaceBetween={150} slidesPerView={4}>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
                 name="Palace"
                 location="Toronto, Canadá"
@@ -129,7 +129,7 @@ export default function App() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://europetrippers.files.wordpress.com/2013/04/10597113.jpg"
                 name="Skb House"
                 location="Amsterdã, Holanda"
@@ -139,7 +139,7 @@ export default function App() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://news3lv.com/resources/media/710495dd-b841-4a4a-989b-d54c7483da3f-large3x4_A7R00137HDR.jpg?1564019073984"
                 name="Atisha Palace"
                 location="Las Vegas, Eua"
@@ -149,7 +149,7 @@ export default function App() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg"
                 name="S Palace"
                 location="Califórnia, Eua"
@@ -159,7 +159,7 @@ export default function App() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg"
                 name="SA Villa"
                 location="Rio de Janeiro, Brasil"
@@ -169,7 +169,7 @@ export default function App() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <House
+              <RecentEstate
                 imgUrl="https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg"
                 name="A Place"
                 location="São Paulo, Brasil"

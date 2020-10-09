@@ -4,7 +4,7 @@ import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Header from '../components/HeaderSecondary';
 import SideBar from '../components/SideBar';
-import House from '../components/House';
+import Estate from '../components/Estate';
 
 SwiperCore.use([Navigation, Pagination, Autoplay, A11y]);
 
@@ -23,7 +23,7 @@ function Explore() {
       <main>
         <SideBar />
         <section className="houses_content container">
-          <House
+          <Estate
             imgUrl="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
             price="240.000"
             description="Casa térrea com sala de estar , sala de jantar , cozinha, 5
@@ -33,7 +33,7 @@ function Explore() {
             bathrooms={3}
             rooms={5}
           />
-          <House
+          <Estate
             imgUrl="https://europetrippers.files.wordpress.com/2013/04/10597113.jpg"
             location="Las Vegas, Eua"
             rooms={4}
@@ -42,7 +42,7 @@ function Explore() {
             area="120m2"
             price="180.000"
           />
-          <House
+          <Estate
             imgUrl="https://i.pinimg.com/originals/93/f9/96/93f996eff6750f30d56f6fed11edd368.jpg"
             location="Califórnia, Eua"
             description="Casa com garagem, 2 andares e muito mais"
@@ -51,7 +51,7 @@ function Explore() {
             area="100m2"
             price="150.000"
           />
-          <House
+          <Estate
             imgUrl="https://www.caandesign.com/wp-content/uploads/2015/07/Al-Rio-de-Janeiro-02-1.jpg"
             location="Rio de Janeiro, Brasil"
             description="Casa com uma vista linda de frente ao mar e com piscina"
@@ -60,7 +60,7 @@ function Explore() {
             area="115m2"
             price="120.000"
           />
-          <House
+          <Estate
             imgUrl="https://imagens-revista.vivadecora.com.br/uploads/2015/06/Reforma-de-fachada2.jpg"
             location="São Paulo, Brasil"
             description="Desfrute morar na maior cidade do Brasil e no melhor lugar"

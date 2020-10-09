@@ -1,8 +1,8 @@
-import React from "react";
-import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from "react-icons/fa";
+import React from 'react';
+import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from 'react-icons/fa';
 // import { Container } from './styles';
 
-function House({
+function Estate({
   imgUrl,
   price,
   category,
@@ -123,4 +123,4 @@ function House({
   );
 }
 
-export default House;
+export default Estate;

@@ -1,7 +1,7 @@
-import React from "react";
-import Head from "next/head";
-import HeaderSecondary from "../components/HeaderSecondary";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react';
+import Head from 'next/head';
+import HeaderSecondary from '../components/HeaderSecondary';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   FaWhatsapp,
   FaObjectUngroup,
@@ -9,12 +9,12 @@ import {
   FaBed,
   FaRegHeart,
   FaShare,
-} from "react-icons/fa";
-import Footer from "../components/Footer";
+} from 'react-icons/fa';
+import Footer from '../components/Footer';
 
 // import { Container } from './styles';
 
-function HouseDetails() {
+function EstateDetails() {
   return (
     <>
       <Head>
@@ -202,4 +202,4 @@ function HouseDetails() {
   );
 }
 
-export default HouseDetails;
+export default EstateDetails;
