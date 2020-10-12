@@ -46,7 +46,6 @@ function Estate({
                 prefix={'R$'}
               />{' '}
             </EstatePrice>
-            <FaRegHeart color={MAIN} />
           </EstateHeader>
           <EstateBody>
             <EstateBodyCategory>{category}</EstateBodyCategory>
