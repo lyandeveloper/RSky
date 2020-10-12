@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from 'react-icons/fa';
+import { MAIN } from '../../styles/Colors';
 import {
   EstateContainer,
   EstateBanner,
@@ -37,7 +38,7 @@ function Estate({
         <EstateInfo>
           <EstateHeader>
             <EstatePrice>{`R$ ${price}`}</EstatePrice>
-            <FaRegHeart color="#2289ff" />
+            <FaRegHeart color={MAIN} />
           </EstateHeader>
           <EstateBody>
             <EstateBodyCategory>{category}</EstateBodyCategory>
@@ -47,15 +48,15 @@ function Estate({
           <EstateFooter>
             <EstateFooterFeatures>
               <EstateFooterItems>
-                <FaObjectUngroup color="#2289ff" size={20} />
+                <FaObjectUngroup color={MAIN} size={20} />
                 <EstateFooterInfo>{area}</EstateFooterInfo>
               </EstateFooterItems>
               <EstateFooterItems>
-                <FaToilet color="#2289ff" size={20} />
+                <FaToilet color={MAIN} size={20} />
                 <EstateFooterInfo>{bathrooms}</EstateFooterInfo>
               </EstateFooterItems>
               <EstateFooterItems>
-                <FaBed color="#2289ff" size={20} />
+                <FaBed color={MAIN} size={20} />
                 <EstateFooterInfo>{rooms}</EstateFooterInfo>
               </EstateFooterItems>
             </EstateFooterFeatures>
