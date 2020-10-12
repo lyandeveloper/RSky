@@ -14,7 +14,10 @@ export const Textarea = styled.textarea`
   width: 100%;
   margin-top: 10px;
   padding: 8px;
+  height: 100px;
 `;
 export const Button = styled.button`
   margin-top: 10px;
+  position: absolute;
+  bottom: 80px;
 `;

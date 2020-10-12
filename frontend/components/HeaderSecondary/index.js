@@ -17,7 +17,7 @@ import {
 function HeaderSecondary() {
   return (
     <HeaderContainer>
-      <HeaderWrapper className="header-wrapper container">
+      <HeaderWrapper className="container">
         <Logo href="/" className="logo">
           <LogoDetail>RS</LogoDetail>ky
         </Logo>

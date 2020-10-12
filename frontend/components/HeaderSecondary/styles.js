@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { MAIN, GRAY, GRAY_LIGHT } from '../../styles/Colors';
+
 export const HeaderContainer = styled.header``;
 
 export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0 !important;
   justify-content: space-evenly;
 `;
 
