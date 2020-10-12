@@ -15,6 +15,7 @@ import { useRouter } from 'next/router';
 import estates from '../../../services/content';
 import FormModal from '../../../components/FormModal';
 import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 // import { Container } from './styles';
 
@@ -59,7 +60,6 @@ function EstateDetails() {
         />
       </Head>
       <HeaderSecondary />
-
       <section className="house-info-details">
         <div className="house-slide-container">
           <Swiper spaceBetween={150} slidesPerView={3}>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
 import { FormContainer, Input, Textarea, Button } from './styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -14,7 +14,11 @@ function FormModal({ postUrl }) {
 
   function sendWhatsapp(e) {
     e.preventDefault();
-    window.open(`https://wa.me/558894451005?text=${message}`);
+    if (email && name && phone && message !== '') {
+      window.open(`https://wa.me/558894451005?text=${message}`);
+    } else {
+      toast.error('Campos vazios não são permitidos');
+    }
   }
 
   return (

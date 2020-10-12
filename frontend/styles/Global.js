@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     padding: 15px 20px;
     transition: background-color 0.5s;
+    outline: 0;
   }
 
   .button-secondary {
