@@ -1,6 +1,7 @@
-import React, { useLayoutEffect, useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Modal from 'react-modal';
+import CurrencyFormat from 'react-currency-format';
 import HeaderSecondary from '../../../components/HeaderSecondary';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -14,10 +15,6 @@ import {
 import { useRouter } from 'next/router';
 import estates from '../../../services/content';
 import FormModal from '../../../components/FormModal';
-import { useEffect } from 'react';
-import { ToastContainer } from 'react-toastify';
-
-// import { Container } from './styles';
 
 function EstateDetails() {
   const router = useRouter();
@@ -127,7 +124,14 @@ function EstateDetails() {
               </div>
             </div>
             <div className="house-details-price">
-              <h2>{`R$ ${findEstates().price}`}</h2>
+              <h2>
+                <CurrencyFormat
+                  value={findEstates().price}
+                  displayType={'text'}
+                  thousandSeparator={true}
+                  prefix={'R$'}
+                />{' '}
+              </h2>
 
               <div className="buttons">
                 <button className="button-secondary">

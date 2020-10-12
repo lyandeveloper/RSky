@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from 'react-icons/fa';
+import CurrencyFormat from 'react-currency-format';
 import { MAIN } from '../../styles/Colors';
 import {
   EstateContainer,
@@ -37,7 +38,14 @@ function Estate({
         <EstateBanner src={imgUrl} alt="" />
         <EstateInfo>
           <EstateHeader>
-            <EstatePrice>{`R$ ${price}`}</EstatePrice>
+            <EstatePrice>
+              <CurrencyFormat
+                value={price}
+                displayType={'text'}
+                thousandSeparator={true}
+                prefix={'R$'}
+              />{' '}
+            </EstatePrice>
             <FaRegHeart color={MAIN} />
           </EstateHeader>
           <EstateBody>
