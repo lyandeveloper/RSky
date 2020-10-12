@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import Head from 'next/head';
 import Modal from 'react-modal';
 import CurrencyFormat from 'react-currency-format';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import HeaderSecondary from '../../../components/HeaderSecondary';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -33,6 +35,10 @@ function EstateDetails() {
 
     return estate;
   };
+
+  function copyEvent() {
+    toast.info('Link copiado!');
+  }
 
   function openModal(e) {
     setModal(true);
@@ -134,9 +140,12 @@ function EstateDetails() {
               </h2>
 
               <div className="buttons">
-                <button className="button-secondary">
-                  <FaShare /> Compartilhar
-                </button>
+                <CopyToClipboard text={postUrl} onCopy={copyEvent}>
+                  <button className="button-secondary">
+                    <FaShare /> Compartilhar
+                  </button>
+                </CopyToClipboard>
+
                 <button className="btn-contact" onClick={openModal}>
                   {' '}
                   <FaWhatsapp size={22} /> <span>Contatar</span>
