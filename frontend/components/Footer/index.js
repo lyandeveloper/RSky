@@ -1,117 +1,72 @@
-import React from "react";
+import React from 'react';
 
-import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
+import Link from 'next/link';
+import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa';
+
+import {
+  FooterContainer,
+  Logo,
+  LogoDetail,
+  SocialMedias,
+  SocialMediaItem,
+  FooterMenu,
+  FooterMenuContent,
+  FooterMenuItem,
+  FooterMenuLink,
+  Copyright,
+} from './styles';
 
 function Footer() {
   return (
     <>
-      <footer>
-        <div className="logo">
-          <span>RS</span>ky
-        </div>
+      <FooterContainer>
+        <Logo className="logo">
+          <LogoDetail>RS</LogoDetail>ky
+        </Logo>
 
-        <div className="social-medias">
-          <span>
+        <SocialMedias className="social-medias">
+          <SocialMediaItem>
             <Link href="#">
               <FaFacebook size={40} />
             </Link>
-          </span>
-          <span>
+          </SocialMediaItem>
+          <SocialMediaItem>
             <Link href="#">
               <FaInstagram size={40} />
             </Link>
-          </span>
-          <span>
+          </SocialMediaItem>
+          <SocialMediaItem>
             <Link href="#">
               <FaTwitter size={40} />
             </Link>
-          </span>
-          <span>
+          </SocialMediaItem>
+          <SocialMediaItem>
             <Link href="#">
               <FaEnvelope size={40} />
             </Link>
-          </span>
-        </div>
-        <nav className="footer-menu">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Explorar</a>
-            </li>
-            <li>
-              <a href="#">Sobre</a>
-            </li>
-            <li>
-              <a href="#">Contato</a>
-            </li>
-          </ul>
-        </nav>
-        <span className="copyright">
-          {new Date().getFullYear()} {"\u00A9"} Todos os direitos reservados -
-          Elian Campos{" "}
-        </span>
-      </footer>
-
-      <style jsx>{`
-        footer {
-          position: relative;
-          margin-top: 300px;
-          top: 600px;
-          width: 100%;
-          background: #2289ff;
-          color: white;
-          height: 300px;
-          padding: 50px;
-          border-radius: 60px 0 0 0;
-        }
-
-        footer .logo {
-          font-size: 32px;
-          font-weight: bold;
-        }
-
-        footer .social-medias {
-          display: flex;
-          justify-content: center;
-        }
-
-        .social-medias span {
-          margin-right: 20px;
-          cursor: pointer;
-        }
-
-        .footer-menu {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
-        }
-
-        .footer-menu ul {
-          display: flex;
-          flex-direction: row;
-          list-style: none;
-        }
-
-        .footer-menu li {
-          margin-right: 20px;
-        }
-
-        .footer-menu a {
-          color: white;
-          text-decoration: none;
-        }
-
-        .copyright {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          padding: 10px;
-        }
-      `}</style>
+          </SocialMediaItem>
+        </SocialMedias>
+        <FooterMenu className="footer-menu">
+          <FooterMenuContent>
+            <FooterMenuItem>
+              <FooterMenuLink href="#">Home</FooterMenuLink>
+            </FooterMenuItem>
+            <FooterMenuItem>
+              <FooterMenuLink href="#">Explorar</FooterMenuLink>
+            </FooterMenuItem>
+            <FooterMenuItem>
+              <FooterMenuLink href="#">Sobre</FooterMenuLink>
+            </FooterMenuItem>
+            <FooterMenuItem>
+              <FooterMenuLink href="#">Contato</FooterMenuLink>
+            </FooterMenuItem>
+          </FooterMenuContent>
+        </FooterMenu>
+        <Copyright className="copyright">
+          {new Date().getFullYear()} {'\u00A9'} Todos os direitos reservados -
+          Elian Campos{' '}
+        </Copyright>
+      </FooterContainer>
     </>
   );
 }
