@@ -60,10 +60,6 @@ function Estate({
                 <EstateFooterInfo>{rooms}</EstateFooterInfo>
               </EstateFooterItems>
             </EstateFooterFeatures>
-            <EstateFooterContact>
-              <Button className="button-secondary">Telefone</Button>
-              <Button>Mensagem</Button>
-            </EstateFooterContact>
           </EstateFooter>
         </EstateInfo>
       </EstateContainer>

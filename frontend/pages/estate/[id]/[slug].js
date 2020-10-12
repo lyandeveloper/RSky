@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useState, useMemo } from 'react';
 import Head from 'next/head';
+import Modal from 'react-modal';
 import HeaderSecondary from '../../../components/HeaderSecondary';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -11,15 +12,20 @@ import {
   FaShare,
 } from 'react-icons/fa';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import estates from '../../../services/content';
-import { useCallback } from 'react';
+import FormModal from '../../../components/FormModal';
+import { useEffect } from 'react';
 
 // import { Container } from './styles';
 
 function EstateDetails() {
   const router = useRouter();
   const { id, slug } = router.query;
+
+  console.log(router.pathname.href);
+
+  const [modal, setModal] = useState(false);
+  const [postUrl, setPostUrl] = useState('');
 
   const findEstates = () => {
     const estate = estates.find(
@@ -29,6 +35,18 @@ function EstateDetails() {
 
     return estate;
   };
+
+  function openModal(e) {
+    setModal(true);
+  }
+
+  function closeModal() {
+    setModal(false);
+  }
+
+  useEffect(() => {
+    setPostUrl(window.location.href);
+  }, []);
 
   return (
     <>
@@ -112,23 +130,42 @@ function EstateDetails() {
               <h2>{`R$ ${findEstates().price}`}</h2>
 
               <div className="buttons">
-                <button>
-                  <FaRegHeart /> Favorito
+                <button className="button-secondary">
+                  <FaShare /> Compartilhar
                 </button>
-
-                <button>Contatar</button>
+                <button className="btn-contact" onClick={openModal}>
+                  {' '}
+                  <FaWhatsapp size={22} /> <span>Contatar</span>
+                </button>
               </div>
             </div>
           </div>
 
           <div className="house-details-description">
+            <Modal
+              isOpen={modal}
+              shouldCloseOnOverlayClick={true}
+              onRequestClose={closeModal}
+              style={{
+                overlay: {
+                  zIndex: 999,
+                },
+                content: {
+                  top: '50%',
+                  left: '50%',
+                  width: '500px',
+                  height: '500px',
+                  marginRight: '-50%',
+                  transform: 'translate(-50%, -50%)',
+                },
+              }}
+            >
+              <FormModal postUrl={postUrl} />
+            </Modal>
             <div className="info">
               <h2>Descrição</h2>
               <p>{findEstates().description}</p>
             </div>
-            <button className="button-secondary">
-              <FaShare /> Compartilhar
-            </button>
           </div>
         </section>
       </section>
@@ -208,6 +245,22 @@ function EstateDetails() {
           width: 300px;
           font-weight: 300;
           color: #444;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+        }
+
+        .btn-contact {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+        }
+
+        .btn-contact span {
+          margin-left: 5px;
         }
       `}</style>
     </>

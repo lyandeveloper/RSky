@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import LandingPage from '../components/LandingPage';
+import ReactModal from 'react-modal';
+
+ReactModal.setAppElement('#App');
 
 export default function App() {
   return (
