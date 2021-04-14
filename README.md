@@ -44,17 +44,14 @@ Real estate system where people buy and rent, houses, apartments and much more.<
 This project was developed with the following technologies:
 
 - [Node.js](https://nodejs.org/en/)
-- [Typescript](https://www.typescriptlang.org/)
-- [NodeMailer](https://nodemailer.com/about/)
-- [uuidv4](https://www.npmjs.com/package/uuidv4)
 - [NextJS](https://nextjs.org/) 
 
 ## :arrow_forward: How to run
 
-- In in both backend and frontend, in your terminal run the command to install the project dependencies: `yarn`;
-- Run the command to start the server: `yarn dev`;
+- At frontend, in your terminal run the command to install the project dependencies: `yarn`;
+- Run the command to start the server: `yarn start`;
 
-If all goes well, the backend of application will be available at: **http://localhost:3333** and frontend at **http://localhost:3000**. 
+If all goes well, the frotend of application will be available at: **http://localhost:3000**. 
 
 ## :memo: Todo
   - Implement the back-end API to front-end
