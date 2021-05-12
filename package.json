@@ -24,7 +24,7 @@
     "react-toastify": "^6.0.9",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1",
-    "swiper": "^6.1.1"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7"
