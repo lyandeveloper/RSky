@@ -3,7 +3,7 @@ const estates = [
     id: 1,
     name: 'Palace',
     img:
-      'https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg',
+      'https://wallpaper.dog/large/20504776.jpg',
     slug: 'casa-terrea-com-sala-de-estar',
     price: 240000,
     description:

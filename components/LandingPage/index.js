@@ -37,7 +37,7 @@ function LandingPage() {
           </div>
           <div className="hero-banner">
             <img
-              src="https://www.richardmeier.com/wp-content/uploads/2019/06/685_1920x1080-min-1.jpg"
+              src="https://wallpapers.com/images/featured/beautiful-house-x1yu28g8twzle26l.jpg"
               alt=""
             />
           </div>
