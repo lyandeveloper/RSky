@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaBed, FaToilet, FaMapMarkerAlt } from 'react-icons/fa';
-import Link from 'next/link';
+import { FaBed, FaMapMarkerAlt, FaToilet } from 'react-icons/fa';
 // import { Container } from './styles';
 
 function RecentEstate({ imgUrl, price, name, location, rooms, bathrooms }) {

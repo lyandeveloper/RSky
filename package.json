@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/styled-jsx": "^2.2.8",
     "bootstrap": "^4.5.2",
     "next": "12",
     "nprogress": "^0.2.0",
@@ -24,9 +23,14 @@
     "react-toastify": "^6.0.9",
     "sass": "^1.26.10",
     "styled-components": "^5.1.1",
-    "swiper": "^6.1.1"
+    "swiper": "^6.1.1",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "@types/node": "20.4.4",
+    "babel-plugin-styled-components": "^1.10.7",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/styled-jsx": "^2.2.8"
   }
 }

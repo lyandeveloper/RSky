@@ -1,46 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
 import Head from 'next/head';
-import Modal from 'react-modal';
-import CurrencyFormat from 'react-currency-format';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import HeaderSecondary from '../../../components/HeaderSecondary';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import {
-  FaWhatsapp,
-  FaObjectUngroup,
-  FaToilet,
-  FaBed,
-  FaRegHeart,
-  FaShare,
-} from 'react-icons/fa';
 import { useRouter } from 'next/router';
-import estates from '../../../services/content';
+import React, { useEffect, useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import CurrencyFormat from 'react-currency-format';
+import {
+  FaBed,
+  FaObjectUngroup,
+  FaShare,
+  FaToilet,
+  FaWhatsapp
+} from 'react-icons/fa';
+import Modal from 'react-modal';
+import { toast } from 'react-toastify';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import FormModal from '../../../components/FormModal';
+import HeaderSecondary from '../../../components/HeaderSecondary';
+import estates from '../../../services/content';
+
+type EstateProps = {
+  id: number;
+  name: string;
+  img: string;
+  slug: string;
+  price: number;
+  description: string;
+  location: string;
+  area: string;
+  bathrooms: number;
+  rooms: number;
+}
 
 function EstateDetails() {
   const router = useRouter();
   const { id, slug } = router.query;
-
-  console.log(router.pathname.href);
+  const [estate, setEstates] = useState<EstateProps>();
 
   const [modal, setModal] = useState(false);
   const [postUrl, setPostUrl] = useState('');
 
   const findEstates = () => {
     const estate = estates.find(
-      (estate) => estate.id == id && estate.slug == slug
+      (estate: any) => estate.id == id && estate.slug == slug
     );
     if (!estate) return '';
 
-    return estate;
+    setEstates(estate);
   };
 
   function copyEvent() {
     toast.info('Link copiado!');
   }
 
-  function openModal(e) {
+  function openModal() {
     setModal(true);
   }
 
@@ -50,6 +61,7 @@ function EstateDetails() {
 
   useEffect(() => {
     setPostUrl(window.location.href);
+    findEstates();
   }, []);
 
   return (
@@ -112,27 +124,27 @@ function EstateDetails() {
         <section className="house-details-body container">
           <div className="house-header-wrapper">
             <div className="house-details-header">
-              <h2>{findEstates().name}</h2>
-              <p>{findEstates().location}</p>
+              <h2>{estate?.name}</h2>
+              <p>{estate?.location}</p>
               <div className="house-details-features">
                 <div className="house-features-items">
                   <FaObjectUngroup size={20} color="#2289ff" />
-                  <span>{findEstates().area}</span>
+                  <span>{estate?.area}</span>
                 </div>
                 <div className="house-features-items">
                   <FaToilet size={20} color="#2289ff" />
-                  <span>{findEstates().bathrooms}</span>
+                  <span>{estate?.bathrooms}</span>
                 </div>
                 <div className="house-features-items">
                   <FaBed size={20} color="#2289ff" />
-                  <span>{findEstates().rooms}</span>
+                  <span>{estate?.rooms}</span>
                 </div>
               </div>
             </div>
             <div className="house-details-price">
               <h2>
                 <CurrencyFormat
-                  value={findEstates().price}
+                  value={estate?.price}
                   displayType={'text'}
                   thousandSeparator={true}
                   prefix={'R$'}
@@ -177,7 +189,7 @@ function EstateDetails() {
             </Modal>
             <div className="info">
               <h2>Descrição</h2>
-              <p>{findEstates().description}</p>
+              <p>{estate?.description}</p>
             </div>
           </div>
         </section>

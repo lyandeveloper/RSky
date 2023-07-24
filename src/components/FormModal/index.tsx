@@ -1,8 +1,6 @@
-import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import { FormContainer, Input, Textarea, Button } from './styles';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import { Button, FormContainer, Input, Textarea } from './styles';
 
 function FormModal({ postUrl }) {
   const [email, setEmail] = useState('');

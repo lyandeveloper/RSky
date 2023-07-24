@@ -1,25 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaRegHeart, FaBed, FaToilet, FaObjectUngroup } from 'react-icons/fa';
 import CurrencyFormat from 'react-currency-format';
+import { FaBed, FaObjectUngroup, FaToilet } from 'react-icons/fa';
 import { MAIN } from '../../styles/Colors';
 import {
-  EstateContainer,
   EstateBanner,
-  EstateInfo,
-  EstateHeader,
-  EstatePrice,
   EstateBody,
   EstateBodyCategory,
   EstateBodyDescription,
   EstateBodyPlace,
+  EstateContainer,
   EstateFooter,
   EstateFooterFeatures,
-  EstateFooterItems,
   EstateFooterInfo,
-  EstateFooterContact,
-  Button,
+  EstateFooterItems,
+  EstateHeader,
+  EstateInfo,
+  EstatePrice
 } from './styles';
+
+type EstateProps = {
+  url: string;
+  imgUrl: string;
+  price: number;
+  category?: string;
+  description: string;
+  location: string;
+  area: string;
+  bathrooms: number;
+  rooms: number;
+}
 
 function Estate({
   url,
@@ -31,7 +39,7 @@ function Estate({
   area,
   bathrooms,
   rooms,
-}) {
+}: EstateProps) {
   return (
     <>
       <EstateContainer href={url}>

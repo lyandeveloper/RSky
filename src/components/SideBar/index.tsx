@@ -16,7 +16,7 @@ import {
 } from './styles';
 
 function sideBar() {
-  const [value, setValue] = useState(150000);
+  const [value, setValue] = useState<any>(150000);
   return (
     <>
       <SidebarContainer>
@@ -26,7 +26,7 @@ function sideBar() {
             <InputRange
               value={value}
               maxValue={150000}
-              min={50000}
+              minValue={50000}
               formatLabel={(value) => `R$${value}`}
               onChange={(value) => setValue(value)}
               name="Preço"
