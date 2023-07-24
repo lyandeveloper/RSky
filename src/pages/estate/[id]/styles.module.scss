@@ -1,0 +1,105 @@
+.house_details_body {
+    margin-bottom: 20px;
+}
+
+.house_img_slide img {
+    width: 800px;
+    height: 500px;
+}
+
+.house_header_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.house_details_body {
+    h2 {
+        color: #333;
+    }
+}
+
+.house_details_header {
+    > h2 {
+        font-size: 28px;
+    }
+
+    > p {
+        font-weight: 300;
+        color: #444;
+    }
+}
+
+.house_details_price {
+    font-size: 28px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    button {
+        margin-top: 20px;
+    }
+}
+
+.house_details_features {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.house_features_items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 14px;
+
+    span {
+        margin-left: 8px;
+        font-weight: 300;
+        color: #444;
+    }
+}
+
+.house_details_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+        p {
+            width: 300px;
+            font-weight: 300;
+            color: #444;
+        }
+
+    }
+
+    
+}
+
+.house_details_price {
+    .buttons {
+        button {
+            margin-left: 10px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btn_contact {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    span {
+        margin-left: 5px;
+    }
+}

@@ -1,6 +1,5 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import CurrencyFormat from 'react-currency-format';
 import {
@@ -16,6 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import FormModal from '../../../components/FormModal';
 import HeaderSecondary from '../../../components/HeaderSecondary';
 import estates from '../../../services/content';
+import styles from './styles.module.scss';
 
 type EstateProps = {
   id: number;
@@ -32,6 +32,7 @@ type EstateProps = {
 
 function EstateDetails() {
   const router = useRouter();
+  
   const { id, slug } = router.query;
   const [estate, setEstates] = useState<EstateProps>();
 
@@ -39,12 +40,14 @@ function EstateDetails() {
   const [postUrl, setPostUrl] = useState('');
 
   const findEstates = () => {
-    const estate = estates.find(
-      (estate: any) => estate.id == id && estate.slug == slug
-    );
-    if (!estate) return '';
+    if(id !== undefined && slug !== undefined) { 
+      const estate = estates.find(
+        (estate: any) => estate.id == id && estate.slug == slug
+      );
+      if (!estate) return '';
 
-    setEstates(estate);
+      setEstates(estate);
+    }
   };
 
   function copyEvent() {
@@ -62,24 +65,16 @@ function EstateDetails() {
   useEffect(() => {
     setPostUrl(window.location.href);
     findEstates();
-  }, []);
+  }, [id, slug]);
 
   return (
     <>
-      <Head>
-        <title>RSky | Details</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <HeaderSecondary />
-      <section className="house-info-details">
-        <div className="house-slide-container">
+      <section className={styles.house_info_details}>
+        <div className={styles.house_slide_container}>
           <Swiper spaceBetween={150} slidesPerView={3}>
             <SwiperSlide>
-              <div className="house-img-slide">
+              <div className={styles.house_img_slide}>
                 <img
                   src="https://troyhomes.co.uk/wp-content/uploads/2016/11/Mirror-House-4.jpg"
                   alt=""
@@ -87,7 +82,7 @@ function EstateDetails() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="house-img-slide">
+              <div className={styles.house_img_slide}>
                 <img
                   src="https://p0.pikist.com/photos/827/31/living-room-apartment-interior-design-indoors-decoration-room-house-interior-modern.jpg"
                   alt=""
@@ -95,7 +90,7 @@ function EstateDetails() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="house-img-slide">
+              <div className={styles.house_img_slide}>
                 <img
                   src="https://www.telegraph.co.uk/content/dam/interiors/2018/spark/bathstore/bathstore-bathroom-interior.jpg"
                   alt=""
@@ -103,7 +98,7 @@ function EstateDetails() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="house-img-slide">
+              <div className={styles.house_img_slide}>
                 <img
                   src="https://i.mlcdn.com.br/portaldalu/fotosconteudo/50960.jpg"
                   alt=""
@@ -111,7 +106,7 @@ function EstateDetails() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="house-img-slide">
+              <div className={styles.house_img_slide}>
                 <img
                   src="https://houseoflastthings.com/wp-content/uploads/2018/10/Room-Interior-Design-Ideas.jpg"
                   alt=""
@@ -121,27 +116,27 @@ function EstateDetails() {
           </Swiper>
         </div>
 
-        <section className="house-details-body container">
-          <div className="house-header-wrapper">
-            <div className="house-details-header">
+        <section className={`${styles.house_details_body} container`}>
+          <div className={styles.house_header_wrapper}>
+            <div className={styles.house_details_header}>
               <h2>{estate?.name}</h2>
               <p>{estate?.location}</p>
-              <div className="house-details-features">
-                <div className="house-features-items">
+              <div className={styles.house_details_features}>
+                <div className={styles.house_features_items}>
                   <FaObjectUngroup size={20} color="#2289ff" />
                   <span>{estate?.area}</span>
                 </div>
-                <div className="house-features-items">
+                <div className={styles.house_features_items}>
                   <FaToilet size={20} color="#2289ff" />
                   <span>{estate?.bathrooms}</span>
                 </div>
-                <div className="house-features-items">
+                <div className={styles.house_features_items}>
                   <FaBed size={20} color="#2289ff" />
                   <span>{estate?.rooms}</span>
                 </div>
               </div>
             </div>
-            <div className="house-details-price">
+            <div className={styles.house_details_price}>
               <h2>
                 <CurrencyFormat
                   value={estate?.price}
@@ -151,14 +146,14 @@ function EstateDetails() {
                 />{' '}
               </h2>
 
-              <div className="buttons">
+              <div className={styles.buttons}>
                 <CopyToClipboard text={postUrl} onCopy={copyEvent}>
-                  <button className="button-secondary">
+                  <button className={styles.button_secondary}>
                     <FaShare /> Compartilhar
                   </button>
                 </CopyToClipboard>
 
-                <button className="btn-contact" onClick={openModal}>
+                <button className={styles.btn_contact} onClick={openModal}>
                   {' '}
                   <FaWhatsapp size={22} /> <span>Contatar</span>
                 </button>
@@ -166,7 +161,7 @@ function EstateDetails() {
             </div>
           </div>
 
-          <div className="house-details-description">
+          <div className={styles.house_details_description}>
             <Modal
               isOpen={modal}
               shouldCloseOnOverlayClick={true}
@@ -187,107 +182,13 @@ function EstateDetails() {
             >
               <FormModal postUrl={postUrl} />
             </Modal>
-            <div className="info">
+            <div className={styles.info}>
               <h2>Descrição</h2>
               <p>{estate?.description}</p>
             </div>
           </div>
         </section>
       </section>
-      <style jsx>{`
-        .house-details-body {
-          margin-bottom: 20px;
-        }
-
-        .house-img-slide img {
-          width: 800px;
-          height: 500px;
-        }
-
-        .house-header-wrapper {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          padding: 20px 0;
-        }
-
-        .house-details-body h2 {
-          color: #333;
-        }
-
-        .house-details-header > h2 {
-          font-size: 28px;
-        }
-
-        .house-details-header > p {
-          font-weight: 300;
-          color: #444;
-        }
-
-        .house-details-price {
-          font-size: 28px;
-          display: flex;
-          align-items: flex-end;
-          flex-direction: column;
-        }
-
-        .house-details-price button {
-          margin-top: 20px;
-        }
-
-        .house-details-features {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-        }
-
-        .house-features-items {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          margin-right: 20px;
-          padding: 10px;
-          font-size: 14px;
-        }
-
-        .house-features-items span {
-          margin-left: 8px;
-          font-weight: 300;
-          color: #444;
-        }
-
-        .house-details-description {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .house-details-price .buttons button {
-          margin-left: 10px;
-        }
-
-        .house-details-description p {
-          width: 300px;
-          font-weight: 300;
-          color: #444;
-        }
-
-        .buttons {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-        }
-
-        .btn-contact {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-        }
-
-        .btn-contact span {
-          margin-left: 5px;
-        }
-      `}</style>
     </>
   );
 }
