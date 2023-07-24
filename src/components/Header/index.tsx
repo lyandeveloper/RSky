@@ -1,37 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  HeaderContainer,
-  Logo,
-  LogoDetail,
-  Menu,
-  MenuContent,
-  MenuItem,
-} from './styles';
+import styles from './styles.module.scss';
 
 function Header() {
   return (
-    <HeaderContainer className="container">
-      <Logo href="/">
-        <LogoDetail>RS</LogoDetail>ky
-      </Logo>
-      <Menu>
-        <MenuContent>
+    <header className={`${styles.header} container`}>
+      <a href="/">
+        <span>RS</span>ky
+      </a>
+      <nav>
+        <ul>
           <Link href="#">
-            <MenuItem>Home</MenuItem>
+            <li>Home</li>
           </Link>
           <Link href="/explore">
-            <MenuItem>Explorar</MenuItem>
+            <li>Explorar</li>
           </Link>
           <Link href="#">
-            <MenuItem>Sobre</MenuItem>
+            <li>Sobre</li>
           </Link>
           <Link href="#">
-            <MenuItem>Contato</MenuItem>
+            <li>Contato</li>
           </Link>
-        </MenuContent>
-      </Menu>
-    </HeaderContainer>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
