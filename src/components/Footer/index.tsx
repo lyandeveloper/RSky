@@ -3,70 +3,59 @@ import React from 'react';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
-import {
-  FooterContainer,
-  Logo,
-  LogoDetail,
-  SocialMedias,
-  SocialMediaItem,
-  FooterMenu,
-  FooterMenuContent,
-  FooterMenuItem,
-  FooterMenuLink,
-  Copyright,
-} from './styles';
+import styles from './styles.module.scss';
 
 function Footer() {
   return (
     <>
-      <FooterContainer>
-        <Logo className="logo">
-          <LogoDetail>RS</LogoDetail>ky
-        </Logo>
+      <footer className={styles.footer}>
+        <div className={styles.logo}>
+          <span>RS</span>ky
+        </div>
 
-        <SocialMedias className="social-medias">
-          <SocialMediaItem>
+        <div className={styles.social_medias}>
+          <span>
             <Link href="#">
               <FaFacebook size={40} />
             </Link>
-          </SocialMediaItem>
-          <SocialMediaItem>
+          </span>
+          <span>
             <Link href="#">
               <FaInstagram size={40} />
             </Link>
-          </SocialMediaItem>
-          <SocialMediaItem>
+          </span>
+          <span>
             <Link href="#">
               <FaTwitter size={40} />
             </Link>
-          </SocialMediaItem>
-          <SocialMediaItem>
+          </span>
+          <span>
             <Link href="#">
               <FaEnvelope size={40} />
             </Link>
-          </SocialMediaItem>
-        </SocialMedias>
-        <FooterMenu className="footer-menu">
-          <FooterMenuContent>
-            <FooterMenuItem>
-              <FooterMenuLink href="#">Home</FooterMenuLink>
-            </FooterMenuItem>
-            <FooterMenuItem>
-              <FooterMenuLink href="#">Explorar</FooterMenuLink>
-            </FooterMenuItem>
-            <FooterMenuItem>
-              <FooterMenuLink href="#">Sobre</FooterMenuLink>
-            </FooterMenuItem>
-            <FooterMenuItem>
-              <FooterMenuLink href="#">Contato</FooterMenuLink>
-            </FooterMenuItem>
-          </FooterMenuContent>
-        </FooterMenu>
-        <Copyright className="copyright">
+          </span>
+        </div>
+        <nav className={styles.footer_menu}>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Explorar</a>
+            </li>
+            <li>
+              <a href="#">Sobre</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <div className={styles.copyright}>
           {new Date().getFullYear()} {'\u00A9'} Todos os direitos reservados -
           Elian Campos{' '}
-        </Copyright>
-      </FooterContainer>
+        </div>
+      </footer>
     </>
   );
 }
