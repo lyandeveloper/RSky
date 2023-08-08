@@ -1,0 +1,97 @@
+.house {
+    position: relative;
+    width: 300px;
+    height: 300px; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin-top: 10px;
+
+    
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        background-color: rgba(0,0,0,0);
+        border-radius: 10px;
+        z-index: 1;
+        transition: background-color 0.5s;
+    }
+
+    
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    
+
+    .info {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: #fff;
+        box-shadow: 0px 11px 50px -28px rgba(10,10,10,1);
+        padding: 10px;
+        z-index: 2;
+        border: 1px solid #eee;
+        border-radius: 10px 10px 0 0;
+
+        .price {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 22px; 
+            color: #314862;
+        }
+
+        .house_header_wrapper {
+            display: flex; 
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .house_header {
+                display: flex;
+                flex-direction: column;
+
+                .house_name {
+                    font-size: 22px; 
+                    font-weight: 600;
+                    color: #314862;
+                }
+                
+                  .house_location {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: lighter;
+                    color: #222;
+                }
+            }
+
+            .house_rooms {
+                :first-child {
+                    margin-right: 10px;
+                }
+                
+                span {
+                    margin-left: 2px;
+                    color: #314862;
+                }
+            }
+        }
+      }
+
+    :hover {
+        transform: scale(1.01);
+
+        .overlay {
+            background-color: rgba(0,0,0,0.3);
+        }
+    }
+}  

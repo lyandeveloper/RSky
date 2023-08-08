@@ -1,0 +1,57 @@
+.aside {
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  position: sticky;
+  box-shadow: 3px 0px 8px 0px rgba(204, 204, 204, 1);
+  background: #fff;
+
+  section {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      padding: 0 20px;
+    }
+
+    .input_container {
+      padding: 0 50px 0 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    select {
+      margin-left: 20px;
+      outline: 0;
+    }
+
+    .input_details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  label {
+    font-size: 13px;
+    margin-left: 5px;
+    font-weight: lighter;
+  }
+
+  input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .features_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+  }
+}

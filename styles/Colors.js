@@ -1,9 +1,0 @@
-export const MAIN = '#2289ff';
-export const SECONDARY = '#314862';
-export const HOVER = '#1c6ac4';
-export const GRAY = '#888';
-export const GRAY2 = '#555';
-export const GRAY_LIGHT = '#ccc';
-export const GRAY_DARKER = '#222';
-export const BLACK = '#000';
-export const WHITE = '#fff';

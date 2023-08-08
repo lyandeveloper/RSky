@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 20px 0 !important;
+
+  a {
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--gray);
+    text-decoration: none;
+
+    span {
+      color: var(--main);
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      list-style: none;
+
+      li {
+        margin-right: 20px;
+        color: var(--secondary);
+        cursor: pointer;
+      }
+    }
+  }
+}
