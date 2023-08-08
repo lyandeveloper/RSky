@@ -1,53 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
 
-import {
-  HeaderContainer,
-  HeaderWrapper,
-  Logo,
-  LogoDetail,
-  Form,
-  Input,
-  Menu,
-  MenuContent,
-  MenuItem,
-  MenuLink,
-} from './styles';
+import styles from './styles.module.scss'
 
 function HeaderSecondary() {
   return (
-    <HeaderContainer>
-      <HeaderWrapper className="container">
-        <Logo href="/" className="logo">
-          <LogoDetail>RS</LogoDetail>ky
-        </Logo>
-        <Form className="search-bar">
-          <Input
+    <header className={styles.header}>
+      <div className={`${styles.header_wrapper} container`}>
+        <a href="/" className="logo">
+          <span>RS</span>ky
+        </a>
+        <form className="search-bar">
+          <input
             type="text"
             name="search"
             placeholder="Buscar lugares, propriedades e muitos mais..."
           />
-        </Form>
+        </form>
         <></>
-      </HeaderWrapper>
+      </div>
 
-      <Menu>
-        <MenuContent>
-          <MenuItem>
-            <MenuLink href="">Compra</MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href="">Aluguel</MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href="">Lançamentos</MenuLink>
-          </MenuItem>
-          <MenuItem>
-            <MenuLink href="">Central de Ajuda</MenuLink>
-          </MenuItem>
-        </MenuContent>
-      </Menu>
-    </HeaderContainer>
+      <nav>
+        <ul>
+          <li>
+            <a href="">Compra</a>
+          </li>
+          <li>
+            <a href="">Aluguel</a>
+          </li>
+          <li>
+            <a href="">Lançamentos</a>
+          </li>
+          <li>
+            <a href="">Central de Ajuda</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 
