@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import { Button, FormContainer, Input, Textarea } from './styles';
+import styles from './styles.module.scss';
 
 function FormModal({ postUrl }) {
   const [email, setEmail] = useState('');
@@ -21,38 +21,38 @@ function FormModal({ postUrl }) {
 
   return (
     <>
-      <FormContainer className="form-modal" action="">
-        <Input
+      <form className={styles.form} action="">
+        <input
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Nome"
         />
-        <Input
+        <input
           type="text"
           name="phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="Telefone"
         />
-        <Input
+        <input
           type="mail"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
-        <Textarea
+        <textarea
           placeholder="Digite sua mensagem"
           value={message}
           name="message"
           onChange={(e) => setMessage(e.target.value)}
-        ></Textarea>
-        <Button onClick={sendWhatsapp} type="submit">
+        ></textarea>
+        <button onClick={sendWhatsapp} type="submit">
           Enviar mensagem
-        </Button>
-      </FormContainer>
+        </button>
+      </form>
     </>
   );
 }
