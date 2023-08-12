@@ -45,7 +45,7 @@
         .price {
             display: flex;
             justify-content: flex-end;
-            font-size: 22px; 
+            font-size: 1.4rem; 
             color: #314862;
         }
 
@@ -60,7 +60,7 @@
                 flex-direction: column;
 
                 .house_name {
-                    font-size: 22px; 
+                    font-size: 1.4rem; 
                     font-weight: 600;
                     color: #314862;
                 }
@@ -68,7 +68,7 @@
                   .house_location {
                     display: flex;
                     align-items: center;
-                    font-size: 14px;
+                    font-size: 1rem;
                     font-weight: lighter;
                     color: #222;
                 }

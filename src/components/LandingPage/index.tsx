@@ -11,8 +11,10 @@ import Header from '../Header';
 import RecentEstate from '../RecentEstate';
 import Footer from '../Footer';
 import styles from './styles.module.scss';
+import { useWindowSize } from '../../helpers/useWindowSize';
 
 function LandingPage() {
+  const { width, height } = useWindowSize();
   return (
     <>
       <Header />
@@ -100,9 +102,9 @@ function LandingPage() {
         <span className={styles.recent_link}>
           <a href="#">Explorar mais</a>
           <FaArrowRight size={14} color="#314862" />
-        </span>
+        </span> 
 
-        <Swiper spaceBetween={150} slidesPerView={4}>
+        <Swiper spaceBetween={width === 1024 ? -280 : width <= 768 ? -40 : 150} slidesPerView={width <= 425 ? 1 : width <= 1024 ? 2 : 4}>
           {estates.map((estate) => (
             <SwiperSlide>
               <RecentEstate
@@ -118,7 +120,7 @@ function LandingPage() {
         </Swiper>
       </section>
 
-      <session className={styles.how_works}>
+      <section className={styles.how_works}>
         <span>Serviços</span>
         <h2>Como funciona</h2>
         <p>
@@ -155,9 +157,9 @@ function LandingPage() {
             </p>
           </div>
         </div>
-      </session>
+      </section>
 
-      <session className={styles.highlights}>
+      <section className={styles.highlights}>
         <span>Destaques</span>
         <h2>Propriedades em destaque</h2>
         <p>
@@ -179,9 +181,9 @@ function LandingPage() {
         </div>
 
         <button type="button">Carregar mais</button>
-      </session>
+      </section>
 
-      <session className={styles.help}>
+      <section className={styles.help}>
         <h2>Alguma dúvida?</h2>
         <h2>Deixe-nos ajudar você</h2>
 
@@ -194,7 +196,7 @@ function LandingPage() {
           />
           <button type="submit">Enviar</button>
         </form>
-      </session>
+      </section>
       <Footer/>
     </>
   );
