@@ -29,13 +29,13 @@
     padding: 10px;
 
     h2 {
-      font-size: 32px;
+      font-size: 2rem;
       color: #314862;
       font-weight: normal;
     }
 
     p {
-      margin-top: 10px;
+      margin-top: .8rem;
       font-weight: lighter;
       color: #555;
     }
@@ -107,7 +107,7 @@
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: normal;
       color: #314862;
     }
@@ -133,7 +133,7 @@
 
     h2 {
       color: #314862;
-      font-size: 28px;
+      font-size: 2rem;
       font-weight: 600;
       margin-top: 10px;
     }
@@ -149,7 +149,7 @@
       text-decoration: none;
       color: #314862;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 1rem;
     }
   }
 
@@ -166,7 +166,7 @@
     > h2 {
       display: flex;
       justify-content: center;
-      font-size: 28px;
+      font-size: 2rem;
       font-weight: 600;
       margin-top: 10px;
       color: #314862;
@@ -178,7 +178,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 500px;
-      font-size: 14px;
+      font-size: 1rem;
       text-align: center;
       color: #555;
     }
@@ -198,14 +198,14 @@
     }
 
     span {
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 600;
       margin-top: 30px;
       color: #222;
     }
 
     p {
-      font-size: 14px;
+      font-size: 1rem;
       margin-top: 20px;
       width: 300px;
       color: #555;
@@ -225,7 +225,7 @@
     > h2 {
       display: flex;
       justify-content: center;
-      font-size: 28px;
+      font-size: 2rem;
       font-weight: 600;
       margin-top: 10px;
       color: #314862;
@@ -237,7 +237,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 500px;
-      font-size: 14px;
+      font-size: 1rem;
       text-align: center;
       color: #555;
     }
@@ -278,13 +278,14 @@
       padding: 20px 0;
       border-radius: 50px;
 
-      input {
-        margin-top: 20px;
+      input { 
         margin-right: 10px;
         padding: 10px;
-        border: 0;
+        border: 1px solid var(--gray_light);
         width: 30%;
-        font-size: 16px;
+        border-radius: 4px;
+        font-size: 1rem;
+        outline: 0;
       }
     }
   }
@@ -301,7 +302,7 @@
     border-radius: 60px 0 0 0;
 
     .logo {
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: bold;
     }
 

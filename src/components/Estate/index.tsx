@@ -1,6 +1,5 @@
 import CurrencyFormat from 'react-currency-format';
 import { FaBed, FaObjectUngroup, FaToilet } from 'react-icons/fa';
-import { MAIN } from '../../styles/Colors';
 import styles from './styles.module.scss';
 import estates from '../../services/content';
 
@@ -50,15 +49,15 @@ function Estate({
           <div className={styles.estate_footer}>
             <div className={styles.estate_footer_features}>
               <div className={styles.estate_footer_items}>
-                <FaObjectUngroup color={MAIN} size={20} />
+                <FaObjectUngroup color={`var(--main)`} size={20} />
                 <span>{area}</span>
               </div>
               <div className={styles.estate_footer_items}>
-                <FaToilet color={MAIN} size={20} />
+                <FaToilet color={`var(--main)`} size={20} />
                 <span>{bathrooms}</span>
               </div>
               <div className={styles.estate_footer_items}>
-                <FaBed color={MAIN} size={20} />
+                <FaBed color={`var(--main)`} size={20} />
                 <span>{rooms}</span>
               </div>
             </div>
