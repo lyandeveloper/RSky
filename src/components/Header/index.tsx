@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 function Header() {
   return (
-    <header className={`${styles.header} container`}>
+    <header className={styles.header}>
       <a href="/">
         <span>RS</span>ky
       </a>

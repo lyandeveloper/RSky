@@ -1,9 +1,14 @@
 .header {
   display: flex;
+  width: 100%; 
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px 0 !important;
+  padding: 20px 2% !important;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center; 
+  }
 
   a {
     font-weight: bold;
@@ -28,6 +33,10 @@
         color: var(--secondary);
         cursor: pointer;
       }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 }

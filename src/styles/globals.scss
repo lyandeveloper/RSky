@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
   --main: #2289ff;
   --secondary: #314862;
@@ -9,56 +16,48 @@
   --black: #000;
   --white: #fff;
 }
-  
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
 
-  @media (max-width: 1080px) {
-    html {
-      font-size: 93.75%;
-    }
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
   }
-  
-  @media (max-width: 720px) {
-    html {
-      font-size: 87.5%;
-    }
-  }
+}
 
-  button {
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: var(--main);
-    border-radius: 30px;
-    border: 0;
-    padding: 15px 20px;
-    transition: background-color 0.5s;
-    outline: 0;
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
   }
+}
 
-  .button-secondary {
-    background: none;
-    color: var(--main);
-    transition: color 0.5s;
-  }
+button {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--main);
+  border-radius: 30px;
+  border: 0;
+  padding: 15px 20px;
+  transition: background-color 0.5s;
+  outline: 0;
+}
 
-  .button-secondary:hover {
-    background: none;
-    color: var(--hover);
-  }
+.button-secondary {
+  background: none;
+  color: var(--main);
+  transition: color 0.5s;
+}
 
-  button:hover {
-    background-color: var(--hover);
-  }
+.button-secondary:hover {
+  background: none;
+  color: var(--hover);
+}
 
-  .container {
-    max-width: 1280px;
-    padding: 0 2%;
-    margin: 0 auto;
-  } 
+button:hover {
+  background-color: var(--hover);
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
