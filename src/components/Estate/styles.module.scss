@@ -4,19 +4,34 @@
   align-items: center;
   background: #fff;
   margin-top: 20px;
-  margin-left: 20px;
   box-shadow: 3px 0px 8px 0px rgba(204, 204, 204, 1);
   text-decoration: none;
-  color: #444;
+  color: #444; 
+
+
+  @media screen and (max-width: 425px) {
+    align-items: normal;
+  }
+
+  
 
   img {
-    width: 400px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
   }
 
   .estate_info {
     margin-left: 20px;
     padding: 0 20px;
-    width: 100%;
+
+    @media screen and (max-width: 425px) {
+      padding: 10px 20px;
+    }
+
+    @media screen and (max-width: 375px) {
+      margin: 0;
+    }
 
     .estate_header {
       display: flex;
@@ -34,7 +49,7 @@
 .estate_body_description {
   margin-top: 10px;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 300; 
 }
 
 .estate_body_place {
@@ -61,6 +76,10 @@
   margin-right: 10px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 425px) {
+    margin-right: 5px;
+  }
 
   span {
     margin-left: 5px;
