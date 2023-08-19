@@ -8,7 +8,8 @@ import styles from './styles.module.scss';
 
 function HeaderSecondary() {
   const [openExtraMenu, setOpenExtraMenu] = useState(false);
-  const [openFilter, setOpenFilter] = useState(true);
+  const [openFilter, setOpenFilter] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
 
   const handleOpenExtraMenu = () => {
     openExtraMenu ? setOpenExtraMenu(false) : setOpenExtraMenu(true);
@@ -16,6 +17,10 @@ function HeaderSecondary() {
 
   const handleOpenFilter = () => {
     openFilter ? setOpenFilter(false) : setOpenFilter(true);
+  }
+
+  const handleOpenSearch = () => {
+    openSearch ? setOpenSearch(false) : setOpenSearch(true);
   }
 
   return (
@@ -33,7 +38,7 @@ function HeaderSecondary() {
         </form>
         <div className={styles.fake_div_02}></div>
         <div className={styles.buttons_mobile}>
-          <IconButton>
+          <IconButton onClick={handleOpenSearch}>
             <Search/>
           </IconButton>
           <IconButton onClick={handleOpenFilter}>
@@ -44,6 +49,14 @@ function HeaderSecondary() {
           </IconButton>
         </div>
       </div>
+
+      <form className={styles.search_bar_mobile} style={{ display: openSearch ? 'flex' : 'none' }}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Buscar lugares, propriedades e muitos mais..."
+          />
+      </form>
 
       <nav className={styles.menu_desktop}>
         <ul>
