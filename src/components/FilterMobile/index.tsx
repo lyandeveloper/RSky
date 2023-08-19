@@ -3,7 +3,7 @@ import InputRange from 'react-input-range';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 
-function SideBar() {
+function FilterMobile({ handleFilter }) {
   const [value, setValue] = useState<any>(150000);
   return (
     <>
@@ -114,9 +114,10 @@ function SideBar() {
             </div>
           </div>
         </section>
+        <button onClick={handleFilter}>Aplicar Filtro</button>
       </aside>
     </>
   );
 }
 
-export default SideBar;
+export default FilterMobile;
